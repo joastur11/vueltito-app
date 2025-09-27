@@ -25,3 +25,5 @@
   Input para poner la plata (pesos) (otro para dolares?)
   Abajo del titulo, cards en grids(columnas) con la info, de un lado bcra, del otro dolar, etc
   Influenciarse con impuestito/steamcito 🧐
+
+Instalar lint
