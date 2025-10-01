@@ -5,4 +5,3 @@ async function CotizarDolares() {
   if (!respuesta.ok) throw new Error('Error en el fetch')
   return await respuesta.json()
 }
-
