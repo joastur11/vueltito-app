@@ -1,29 +1,22 @@
 ## Plan
-  El usuario ingresa monto + plazo (ej. 12 meses).
-  Según la inversión elegida (ej. plazo fijo TNA 40%), hacés el cálculo mes a mes → capital + intereses.
-  Ejemplo: con 1M ARS a 12 meses, a 40% TNA, la TEA es ~49%. Entonces mostrarías: “Al final tendrías $1.49M ARS (sin descontar inflación)”.
-  Si elegís plazo fijo UVA, necesitás indexar por inflación → tomás proyecciones (ej. 100% anual) y aplicás.
+  El usuario ingresa monto (+ plazo (ej. 12 meses)?).
+  Dos areas distintas:
+    ahorro (dolar, oro, cripto estable)
+    inversion (tna(manual, mp, personal pay))
 
-  Podés dar una tabla comparativa:
-    Plazo fijo tradicional
-    Plazo fijo UVA
-    Dólar (si lo hubieras comprado hoy y solo guardás)
 
-  ## APIs
-    Usar BCRA API para tasas vigentes.
-    Usar REM para proyecciones (inflación y dólar).
-    Usar Dólar API para el paralelo, porque en la práctica la gente piensa en dólares, no en el oficial.
+  Dar una tabla comparativa:
+    Ahorro: cuantos dolares, oro y usdt
+    Inversiones: TNA
 
-    Ahi tengo:
-      “Plazo fijo tradicional” → TNA actual.
-      “Plazo fijo UVA” → inflación proyectada (REM).
-      “Comprar dólar blue/MEP” → cotización actual + proyección REM.
+## APIs
+  Oro: Alpha Vantage o EOD Historical Data
 
 ## Mapa Básico
   Titulo Platia.app 
   Texto cortito "explicativo" 
   Input para poner la plata (pesos) (otro para dolares?)
-  Abajo del titulo, cards en grids(columnas) con la info, de un lado bcra, del otro dolar, etc
+  Abajo del titulo, cards en grids(columnas) con la info, de un lado ahorro, del otro inversiones, etc
   Influenciarse con impuestito/steamcito 🧐
   Estilo bento
 
