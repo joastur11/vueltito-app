@@ -11,17 +11,22 @@
     <main>
       <h1>Platita app</h1>
       <p></p>
-      <input placeholder="Ingresa un monto $" />
-      <button>Calcular</button>
+      <input placeholder="Ingresa un monto $" id="monto-usuario" type="number" min="0" />
+      <button id="boton-calcular">Calcular</button>
     </main>
-    <div id="resultados">
-      <div id="bancos">
+    <section id="resultados">
+      <div class="dolares">
+        <div id="cotizacion-dolares">
+          <!-- -->
+        </div>
+        <div id="compra-dolares">
+          <!-- -->
+        </div>
+      </div>
+      <div id="inversiones">
         <!-- -->
       </div>
-      <div id="dolares">
-        <!-- -->
-      </div>
-    </div>
+    </section>
     <script type="module" src='main.js'></script>
   </body>
 </html>
