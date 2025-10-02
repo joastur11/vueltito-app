@@ -4,13 +4,13 @@
     ahorro (dolar, oro, cripto estable)
     inversion (tna(manual, mp, personal pay))
 
-
   Dar una tabla comparativa:
     Ahorro: cuantos dolares, oro y usdt
     Inversiones: TNA 
 
 ## APIs
   Oro: Alpha Vantage o EOD Historical Data
+  usdt: tmb alpha?
 
 ## Mapa Básico
   Titulo Platita.app 
@@ -23,3 +23,6 @@
 
 ## Cotizacion
   todas las validaciones del calculo.
+
+## Ui 
+  no mas api calls por hoy 😒
