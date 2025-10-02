@@ -16,6 +16,10 @@
   Titulo Platita.app 
   Texto cortito "explicativo" 
   Input para poner la plata (pesos) (otro para dolares?)
-  Abajo del titulo, cards en grids(columnas) con la info, de un lado ahorro, del otro inversiones, etc
+  Abajo del input o al costado, cotizacion dolar, oro etc.
+  Abajo del input, cards en grids(columnas) con la info, de un lado ahorro, del otro inversiones, etc
   Influenciarse con impuestito/steamcito 🧐
   Estilo bento
+
+## Cotizacion
+  todas las validaciones del calculo.
