@@ -16,6 +16,7 @@ async function mostrarDolares() {
 
   `
 }
+mostrarDolares()
 
 const $montoUsuario = document.querySelector('#monto-usuario')
 
@@ -42,6 +43,5 @@ async function calcularDolares() {
 const $botonCalcular = document.querySelector('#boton-calcular')
 
 $botonCalcular.addEventListener('click', () => {
-  mostrarDolares()
   calcularDolares()
 })
