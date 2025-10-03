@@ -7,14 +7,11 @@ async function mostrarDolares() {
   const cotizacion = await cotizarDolares()
 
   $divDolares.innerHTML = `
-    <div>
-      <p> Dolar </p>
-      <ul>
-        <li> ${cotizacion[0].nombre} - Compra: ${cotizacion[0].compra} - Venta: ${cotizacion[0].venta} </li>
-        <li> ${cotizacion[1].nombre} - Compra: ${cotizacion[1].compra} - Venta: ${cotizacion[1].venta} </li>
-      </ul>
-    </div>
-
+    <p> Dolar </p>
+    <ul>
+      <li> ${cotizacion[0].nombre} - Compra: ${cotizacion[0].compra} - Venta: ${cotizacion[0].venta} </li>
+      <li> ${cotizacion[1].nombre} - Compra: ${cotizacion[1].compra} - Venta: ${cotizacion[1].venta} </li>
+    </ul>    
   `
 }
 mostrarDolares()
@@ -37,13 +34,11 @@ async function comprarDolares() {
   const $divCompraDolares = document.querySelector('#compra-dolares')
 
   $divCompraDolares.innerHTML = `
-    <div>
-      <p> Con tus ${platita} pesos, podes comprar: </p>
-      <ul>
-        <li>Dolar Oficial: ${compraOficial} </li>
-        <li>Dolar Blue: ${compraBlue} </li>
-      </ul>
-    </div
+    <p> Con tus ${platita} pesos, podes comprar: </p>
+    <ul>
+      <li>Dolar Oficial: ${compraOficial} </li>
+      <li>Dolar Blue: ${compraBlue} </li>
+    </ul>
   `
 }
 
@@ -53,13 +48,10 @@ async function mostrarOro() {
   const cotizacion = await obtenerPrecioOroUsd()
 
   $divOro.innerHTML = `
-    <div>
-      <p> Oro: 1oz </p>
-      <ul>
-        <li> ${cotizacion} Dolares </li>
-      </ul>
-    </div>
-
+    <p> Oro: 1oz </p>
+    <ul>
+      <li> ${cotizacion} Dolares </li>
+    </ul>
   `
 }
 mostrarOro()
@@ -80,16 +72,28 @@ async function comprarOro() {
   const $divCompraOro = document.querySelector('#compra-oro')
 
   $divCompraOro.innerHTML = `
-    <div>
-      <p> Con tus ${platita} pesos, podes comprar: </p>
-      <ul>
-        <li>Onzas de Oro: ${compraOro.toFixed(4)} - Unos ${enGramos.toFixed(2)} gramos. </li>
-      </ul>
-    </div
+    <p> Con tus ${platita} pesos, podes comprar: </p>
+    <ul>
+      <li>Onzas de Oro: ${compraOro.toFixed(4)} - Unos ${enGramos.toFixed(2)} gramos. </li>
+    </ul>
   `
 }
 
 // inversiones
+
+async function mostrarTazas() {
+  const tnas = await obtenerTNA()
+  const $tnas = document.querySelector('#tnas')
+
+  $tnas.innerHTML = `
+    <p> Rendimientos en Billeteras </p>
+    <ul>
+      ${tnas.map(r => `<li> ${r.nombre}: ${r.tna}% anual </li>`).join('')}
+    </ul>
+  `
+}
+mostrarTazas()
+
 async function calcularTNA() {
   const tnas = await obtenerTNA()
   const platita = Number($montoUsuario.value)
@@ -105,18 +109,15 @@ async function calcularTNA() {
   })
 }
 
-
-async function mostrarTNAs() {
-  const $divTNA = document.querySelector('#tna')
+async function mostrarRendimientos() {
+  const $divRendimientos = document.querySelector('#rendimientos-ganados')
   const rendimientos = await calcularTNA()
 
-  $divTNA.innerHTML = `
-    <div>
-      <p>Con tus ${$montoUsuario.value} pesos, al mes ganarías:</p>
-      <ul>
-        ${rendimientos.map(r => `<li>${r.nombre}: $${r.rendimiento}</li>`).join('')}
-      </ul>
-    </div>
+  $divRendimientos.innerHTML = `
+    <p>Con tus ${$montoUsuario.value} pesos, al mes ganarías:</p>
+    <ul>
+      ${rendimientos.map(r => `<li>${r.nombre}: $${r.rendimiento}</li>`).join('')}
+    </ul>
   `
 }
 
@@ -125,5 +126,5 @@ const $botonCalcular = document.querySelector('#boton-calcular')
 $botonCalcular.addEventListener('click', () => {
   comprarDolares()
   comprarOro()
-  mostrarTNAs()
+  mostrarRendimientos()
 })
