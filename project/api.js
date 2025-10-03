@@ -1,4 +1,4 @@
-export { cotizarDolares, obtenerPrecioOroUsd }
+export { cotizarDolares, obtenerPrecioOroUsd, obtenerTNA }
 
 async function cotizarDolares() {
   const respuesta = await fetch('https://dolarapi.com/v1/dolares')
@@ -23,4 +23,10 @@ async function obtenerPrecioOroUsd() {
   const precioCierre = Number(series[ultimaFecha]['4. close'])
 
   return precioCierre
+}
+
+async function obtenerTNA() {
+  const respuesta = await fetch('./tna.json')
+  if (!respuesta.ok) throw new Error('Error cargando TNA')
+  return await respuesta.json()
 }
