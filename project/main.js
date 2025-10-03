@@ -1,4 +1,5 @@
-import { cotizarDolares, obtenerPrecioOroUsd } from "./api.js";
+import { cotizarDolares, obtenerPrecioOroUsd, obtenerTNA } from "./api.js";
+
 
 async function mostrarDolares() {
   const $divDolares = document.querySelector('#cotizacion-dolares')
@@ -88,9 +89,41 @@ async function comprarOro() {
   `
 }
 
+// inversiones
+async function calcularTNA() {
+  const tnas = await obtenerTNA()
+  const platita = Number($montoUsuario.value)
+
+  return tnas.map(inversion => {
+    const tasaMensual = inversion.tna / 12 / 100
+    const rendimiento = platita * tasaMensual
+
+    return {
+      nombre: inversion.nombre,
+      rendimiento: rendimiento.toFixed(2)
+    }
+  })
+}
+
+
+async function mostrarTNAs() {
+  const $divTNA = document.querySelector('#tna')
+  const rendimientos = await calcularTNA()
+
+  $divTNA.innerHTML = `
+    <div>
+      <p>Con tus ${$montoUsuario.value} pesos, al mes ganarías:</p>
+      <ul>
+        ${rendimientos.map(r => `<li>${r.nombre}: $${r.rendimiento}</li>`).join('')}
+      </ul>
+    </div>
+  `
+}
+
 const $botonCalcular = document.querySelector('#boton-calcular')
 
 $botonCalcular.addEventListener('click', () => {
   comprarDolares()
   comprarOro()
+  mostrarTNAs()
 })
