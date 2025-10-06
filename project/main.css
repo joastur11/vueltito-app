@@ -1,3 +1,27 @@
 body {
-  background-color: lightgrey;
+  background-color: lightgrey;  
+}
+
+#hero {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#resultados {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". ahorro inversiones .";
+  align-items: start;
+  justify-items: center;    
+}
+
+
+.ahorro {
+  grid-area: ahorro;
+}
+
+.inversiones {
+  grid-area: inversiones;
 }
