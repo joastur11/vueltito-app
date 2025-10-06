@@ -1,4 +1,4 @@
-import { cotizarDolares, obtenerPrecioOroUsd, obtenerTNA, cotizarDolarCripto, obtenerPlazosFijos } from "./api.js";
+import { cotizarDolares, obtenerTNA, cotizarDolarCripto, obtenerPlazosFijos } from "./api.js";
 
 // dolares
 async function mostrarDolares() {
@@ -75,44 +75,6 @@ async function comprarDolarCripto() {
     <p> Con tus $${platita} pesos, podes comprar: </p>
     <ul>
       <li>Dolar Cripto: $${compraCripto} </li>
-    </ul>
-  `
-}
-
-// Oro
-async function mostrarOro() {
-  const $divOro = document.querySelector('#cotizacion-oro')
-
-  const cotizacion = await obtenerPrecioOroUsd()
-
-  $divOro.innerHTML = `
-    <strong> Oro: 1oz </strong>
-    <ul>
-      <li> $${cotizacion} Dolares </li>
-    </ul>
-  `
-}
-mostrarOro()
-
-async function calcularOro() {
-  const { platita, compraOficial } = await calcularDolares()
-  const cotizacionOro = await obtenerPrecioOroUsd()
-
-  const compraOro = compraOficial / cotizacionOro
-  const enGramos = compraOro * 31.1035
-
-  return { platita, compraOro, enGramos }
-}
-
-async function comprarOro() {
-  const { platita, compraOro, enGramos } = await calcularOro()
-
-  const $divCompraOro = document.querySelector('#compra-oro')
-
-  $divCompraOro.innerHTML = `
-    <p> Con tus $${platita} pesos, podes comprar: </p>
-    <ul>
-      <li>Onzas de Oro: ${compraOro.toFixed(4)} - Unos ${enGramos.toFixed(2)} gramos. </li>
     </ul>
   `
 }
@@ -202,11 +164,11 @@ async function mostrarIntereses() {
 }
 
 // evento
+
 const $botonCalcular = document.querySelector('#boton-calcular')
 
 $botonCalcular.addEventListener('click', () => {
   comprarDolares()
-  comprarOro()
   comprarDolarCripto()
   mostrarRendimientos()
   mostrarIntereses()

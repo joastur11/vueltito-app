@@ -9,59 +9,53 @@
   </head>
   <body>
     <main>
-      <h1>Platita app</h1>
-      <p></p>
-      <input placeholder="Ingresa un monto $" id="monto-usuario" type="number" min="0" />
-      <button id="boton-calcular">Calcular</button>
+      <section id="hero">
+        <h1>Platita app</h1>
+        <p>Te sobro un vuelto este mes? fíjate</p>
+        <input placeholder="Ingresa un monto $" id="monto-usuario" type="number" min="0" />
+        <button id="boton-calcular">Calcular</button>
+      </section>
+      <section id="resultados">
+        <div class="ahorro">
+          <h2>Ahorros</h2>
+          <div class="dolares">
+            <div id="cotizacion-dolares">
+              <!-- -->
+            </div>
+            <div id="compra-dolares">
+              <!-- -->
+            </div>
+          </div>
+          <div class="dolar-cripto">
+            <div id="cotizacion-dolar-cripto">
+              <!-- -->
+            </div>
+            <div id="compra-dolar-cripto">
+              <!-- -->
+            </div>
+          </div>
+        </div>
+        <div class="inversiones">
+          <h2>Inversiones</h2>
+          <div class="rendimientos">
+            <div id="tnas">
+              <!-- -->
+            </div>
+            <div id="rendimientos-ganados">
+              <!-- -->
+            </div>
+          </div>
+          <div class="plazos-fijos">
+            <div id="tazas">
+              <!-- -->
+            </div>
+            <div id="intereses-ganados">
+              <!-- -->
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <section id="resultados">
-      <div class="ahorro">
-        <h2>Ahorros</h2>
-        <div class="dolares">
-          <div id="cotizacion-dolares">
-            <!-- -->
-          </div>
-          <div id="compra-dolares">
-            <!-- -->
-          </div>
-        </div>
-        <div class="dolar-cripto">
-          <div id="cotizacion-dolar-cripto">
-            <!-- -->
-          </div>
-          <div id="compra-dolar-cripto">
-            <!-- -->
-          </div>
-        </div>
-        <div class="oro">
-          <div id="cotizacion-oro">
-            <!-- -->
-          </div>
-          <div id="compra-oro">
-            <!-- -->
-          </div>
-        </div>
-      </div>
-      <div class="inversiones">
-        <h2>Inversiones</h2>
-        <div class="rendimientos">
-          <div id="tnas">
-            <!-- -->
-          </div>
-          <div id="rendimientos-ganados">
-            <!-- -->
-          </div>
-        </div>
-        <div class="plazos-fijos">
-          <div id="tazas">
-            <!-- -->
-          </div>
-          <div id="intereses-ganados">
-            <!-- -->
-          </div>
-        </div>
-      </div>
-    </section>
     <script type="module" src='main.js'></script>
   </body>
 </html>
