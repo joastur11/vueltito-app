@@ -1,7 +1,7 @@
 ## Plan
   El usuario ingresa monto (+ plazo (ej. 12 meses)?).
   Dos areas distintas:
-    ahorro (dolar, oro, cripto estable)
+    ahorro (dolar, oro, cripto estable) 
     inversion (tna(manual, mp, personal pay))
 
   Dar una tabla comparativa:
@@ -9,8 +9,7 @@
     Inversiones: TNA 
 
 ## APIs
-  Oro: Alpha Vantage o EOD Historical Data
-  usdt: tmb alpha?
+  ya esta por ahora
 
 ## Mapa Básico
   Titulo Platita.app 
@@ -24,9 +23,14 @@
 ## Cotizacion
   todas las validaciones del calculo.
 
+## Codigo
+  refactor
+  en vez de ejecutar funciones de mostrar, que puedo hacer
+
 ## Ui 
   no mas api calls por hoy 😒
   ? con modal al lado de cosas explicativo 
+  agregar fechas de actualizacion (en las apis estan)
   
 https://comparatasas.ar/
 
