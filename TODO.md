@@ -12,8 +12,8 @@
   ya esta por ahora
 
 ## Mapa Básico
-  Titulo Platita.app 
-  Texto cortito "explicativo" 
+  Titulo Platita.app o Vueltito.app? me sobro un vuelto, algo asi che
+  Texto cortito "explicativo" (te sobro un vuelto? Fijate unas opciones simples)
   Input para poner la plata (pesos) (otro para dolares?)
   Abajo del input o al costado, cotizacion dolar, oro etc.
   Abajo del input, cards en grids(columnas) con la info, de un lado ahorro, del otro inversiones, etc
