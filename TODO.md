@@ -26,6 +26,7 @@
 
 ## Ui 
   no mas api calls por hoy 😒
-
+  ? con modal al lado de cosas explicativo 
+  
 https://comparatasas.ar/
 
