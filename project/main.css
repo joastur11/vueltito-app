@@ -10,18 +10,55 @@ body {
 
 #resultados {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    ". ahorro inversiones .";
+    "ahorro inversiones";
   align-items: start;
   justify-items: center;    
 }
 
-
 .ahorro {
   grid-area: ahorro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-ahorro {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dolares {
+  display: flex;
+  flex-direction: column;
+}
+
+.dolar-cripto {
+  display: flex;
+  flex-direction: column;
 }
 
 .inversiones {
   grid-area: inversiones;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-inversion {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.rendimientos {
+  display: flex;
+  flex-direction: column;
+}
+
+.plazos-fijos {
+  display: flex;
+  flex-direction: column;
 }
