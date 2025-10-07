@@ -7,7 +7,7 @@ async function mostrarDolares() {
   const cotizacion = await cotizarDolares()
 
   $divDolares.innerHTML = `
-    <strong> Dolar </strong>
+    <h3> Dolar </h3>
     <ul>
       <li> ${cotizacion[0].nombre} - Compra: $${cotizacion[0].compra} - Venta: $${cotizacion[0].venta} </li>
       <li> ${cotizacion[1].nombre} - Compra: $${cotizacion[1].compra} - Venta: $${cotizacion[1].venta} </li>
@@ -34,7 +34,7 @@ async function comprarDolares() {
   const $divCompraDolares = document.querySelector('#compra-dolares')
 
   $divCompraDolares.innerHTML = `
-    <p> Con tus $${platita} pesos, podes comprar: </p>
+    <strong> Con tus $${platita} pesos, podes comprar: </strong>
     <ul>
       <li>Dolar Oficial: $${compraOficial} </li>
       <li>Dolar Blue: $${compraBlue} </li>
@@ -49,7 +49,7 @@ async function mostrarDolarCripto() {
   const cotizacion = await cotizarDolarCripto()
 
   $divDolares.innerHTML = `
-    <strong> Dolar Cripto </strong>
+    <h3> Dolar Cripto </h3>
     <ul>
       <li> ${cotizacion.nombre} - Compra: $${cotizacion.compra} - Venta: $${cotizacion.venta} </li>
     </ul>    
@@ -72,7 +72,7 @@ async function comprarDolarCripto() {
   const $divCompraDolarCripto = document.querySelector('#compra-dolar-cripto')
 
   $divCompraDolarCripto.innerHTML = `
-    <p> Con tus $${platita} pesos, podes comprar: </p>
+    <strong> Con tus $${platita} pesos, podes comprar: </strong>
     <ul>
       <li>Dolar Cripto: $${compraCripto} </li>
     </ul>
@@ -86,7 +86,7 @@ async function mostrarTazas() {
   const $tnas = document.querySelector('#tnas')
 
   $tnas.innerHTML = `
-    <strong> Rendimientos en Billeteras </strong>
+    <h3> Rendimientos en Billeteras </h3>
     <ul>
       ${tnas.map(r => `<li> ${r.nombre}: ${r.tna}% anual </li>`).join('')}
     </ul>
@@ -114,7 +114,7 @@ async function mostrarRendimientos() {
   const rendimientos = await calcularTNA()
 
   $divRendimientos.innerHTML = `
-    <p>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</p>
+    <strong>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</strong>
     <ul>
       ${rendimientos.map(r => `<li>${r.nombre}: $${r.rendimiento}</li>`).join('')}
     </ul>
@@ -128,7 +128,7 @@ async function mostrarPlazosFijos() {
   const $plazos = document.querySelector('#tazas')
 
   $plazos.innerHTML = `
-    <strong> Plazo fijo a 30 días </strong>
+    <h3> Plazo fijo a 30 días </h3>
     <ul>
       ${plazos.map(r => `<li> ${r.nombre}: ${r.tna}% anual </li>`).join('')}
     </ul>
@@ -156,7 +156,7 @@ async function mostrarIntereses() {
   const intereses = await calcularPlazosFijos()
 
   $divIntereses.innerHTML = `
-    <p>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</p>
+    <strong>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</strong>
     <ul>
       ${intereses.map(r => `<li>${r.nombre}: $${r.rendimiento}</li>`).join('')}
     </ul>
