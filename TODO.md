@@ -31,6 +31,9 @@
   no mas api calls por hoy 😒
   ? con modal al lado de cosas explicativo 
   agregar fechas de actualizacion (en las apis estan)
+  mensaje de responsabilidad abajo (los precios son aproximados y pueden estar desactualizados)
+
+esparcir el contenido para que quede bien n los cuadritos
   
 https://comparatasas.ar/
 
