@@ -6,14 +6,18 @@ body {
   display: grid;
   place-items: center;
   text-align: center;
+  margin-top: 80px;
 }
 
 #resultados {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 3fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "ahorro inversiones";
-  align-items: start;
+    ". ahorro inversiones ."
+    ". disclaimer inversiones .";
+  align-items: stretch;
+  gap: 2rem;
   justify-items: center;    
 }
 
@@ -22,11 +26,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 60px;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 0px 16px 10px 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card-ahorro {
   display: flex;
   justify-content: center;
+  margin-top: -15px;
   gap: 2rem;
 }
 
@@ -45,11 +56,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 60px;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 0px 16px 10px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  grid-row: 1 / span 2;
 }
 
 .card-inversion {
   display: flex;
   justify-content: center;
+  margin-top: -15px;
   gap: 2rem;
 }
 
@@ -61,4 +80,14 @@ body {
 .plazos-fijos {
   display: flex;
   flex-direction: column;
+}
+
+.disclaimer {
+  grid-area: disclaimer;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 0px 16px 10px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  
 }
