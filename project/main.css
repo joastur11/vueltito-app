@@ -1,5 +1,27 @@
 body {
-  background-color: lightgrey;  
+  background-color: #09090b;  
+}
+
+#titulo {
+  font-size: 3rem;
+  color: #f5f5f5;
+}
+
+#textito {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+}
+
+#monto-usuario {
+  padding: 6px;
+  width: 19rem;
+}
+
+#boton-calcular {
+  width: 5rem;
+  height: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 6px;
 }
 
 #hero {
@@ -10,6 +32,8 @@ body {
 }
 
 #resultados {
+  font-size: 1.2rem;
+  color: #f5f5f5;
   display: grid;
   grid-template-columns:1fr 3fr 3fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -22,12 +46,13 @@ body {
 }
 
 .ahorro {
+  background-color: #18181b;
   grid-area: ahorro;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
-  border: 2px solid black;
+  border: 1px solid #374151;
   border-radius: 6px;
   padding: 0px 16px 10px 16px;
   width: 100%;
@@ -52,12 +77,13 @@ body {
 }
 
 .inversiones {
+  background-color: #18181b;
   grid-area: inversiones;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
-  border: 2px solid black;
+  border: 1px solid #374151;
   border-radius: 6px;
   padding: 0px 16px 10px 16px;
   width: 100%;
@@ -83,11 +109,11 @@ body {
 }
 
 .disclaimer {
+  background-color: #18181b;
   grid-area: disclaimer;
-  border: 2px solid black;
+  border: 1px solid #374151;
   border-radius: 6px;
   padding: 0px 16px 10px 16px;
   width: 100%;
-  box-sizing: border-box;
-  
+  box-sizing: border-box;  
 }
