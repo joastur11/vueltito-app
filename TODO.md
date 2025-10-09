@@ -17,6 +17,7 @@
   Input para poner la plata (pesos) (otro para dolares?)
   Abajo del input o al costado, cotizacion dolar, oro etc.
   Abajo del input, cards en grids(columnas) con la info, de un lado ahorro, del otro inversiones, etc
+  Footer
   Influenciarse con impuestito/steamcito 🧐
   Estilo bento
 
@@ -34,6 +35,9 @@
   mensaje de responsabilidad abajo (los precios son aproximados y pueden estar desactualizados)
 
 esparcir el contenido para que quede bien n los cuadritos
-  
+
+## Footer 
+  Hecho por mi, año, github
+
 https://comparatasas.ar/
 
