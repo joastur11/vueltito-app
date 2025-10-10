@@ -12,6 +12,7 @@
   ya esta por ahora
 
 ## Mapa Básico
+  Navbar con nombre pag, modo oscuro?!?!
   Titulo Platita.app o Vueltito.app? me sobro un vuelto, algo asi che
   Texto cortito "explicativo" (te sobro un vuelto? Fijate unas opciones simples)
   Input para poner la plata (pesos) (otro para dolares?)
