@@ -9,9 +9,19 @@ async function mostrarDolares() {
   $divDolares.innerHTML = `
     <h3> Dolar </h3>
     <ul>
-      <li> ${cotizacion[0].nombre} - Compra: $${cotizacion[0].compra} - Venta: $${cotizacion[0].venta} </li>
-      <li> ${cotizacion[1].nombre} - Compra: $${cotizacion[1].compra} - Venta: $${cotizacion[1].venta} </li>
-    </ul>    
+      <li>${cotizacion[0].nombre}:
+        <ul> 
+          <li>Compra: $${cotizacion[0].compra}</li>
+          <li>Venta: $${cotizacion[0].venta}</li>
+        </ul>
+      </li>
+      <li>${cotizacion[1].nombre}:
+        <ul> 
+          <li>Compra: $${cotizacion[1].compra}</li>
+          <li>Venta: $${cotizacion[1].venta}</li>
+        </ul>
+      </li>
+    </ul>
   `
 }
 mostrarDolares()
@@ -51,7 +61,8 @@ async function mostrarDolarCripto() {
   $divDolares.innerHTML = `
     <h3> Dolar Cripto </h3>
     <ul>
-      <li> ${cotizacion.nombre} - Compra: $${cotizacion.compra} - Venta: $${cotizacion.venta} </li>
+      <li>Compra: $${cotizacion.compra} </li>
+      <li>Venta: $${cotizacion.venta} </li>
     </ul>    
   `
 }
