@@ -5,7 +5,7 @@ body {
 
 #titulo {
   font-size: 3rem;
-  color: #f5f5f5;
+  color: #5241f5;
   font-weight: 700;
   margin-bottom: 5px;  
 }
@@ -32,7 +32,7 @@ body {
   height: 2.5rem;
   margin-top: 1.5rem;
   border-radius: 8px;
-  background-color: #5d92ff;
+  background-color: #7c87ffdc;
   color: #09090b;
   font-size: 1.1rem;
   font-weight: 600;
@@ -42,7 +42,7 @@ body {
 }
 
 #boton-calcular:hover {
-  background-color: #4a77cc;
+  background-color: #7c86ff;
 }
 
 #hero {
@@ -177,4 +177,8 @@ hr {
 
 li {
   padding: 1.5px;
+}
+
+.res {
+  color: #5c67da;
 }

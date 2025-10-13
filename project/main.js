@@ -11,14 +11,14 @@ async function mostrarDolares() {
     <ul>
       <li><strong>${cotizacion[0].nombre}:</strong>
         <ul> 
-          <li>Compra: $${cotizacion[0].compra}</li>
-          <li>Venta: $${cotizacion[0].venta}</li>
+          <li>Compra: <span class='res'>$${cotizacion[0].compra}</span></li>
+          <li>Venta: <span class='res'>$${cotizacion[0].venta}</span></li>
         </ul>
       </li>
       <li><strong>${cotizacion[1].nombre}:</strong>
         <ul> 
-          <li>Compra: $${cotizacion[1].compra}</li>
-          <li>Venta: $${cotizacion[1].venta}</li>
+          <li>Compra: <span class='res'>$${cotizacion[1].compra}</span></li>
+          <li>Venta: <span class='res'>$${cotizacion[1].venta}</span></li>
         </ul>
       </li>
     </ul>
@@ -44,10 +44,10 @@ async function comprarDolares() {
   const $divCompraDolares = document.querySelector('#compra-dolares')
 
   $divCompraDolares.innerHTML = `
-    <strong> Con tus $${platita} pesos, podes comprar: </strong>
+    <strong> Con tus <span class='res'>$${platita}</span> pesos, podes comprar: </strong>
     <ul>
-      <li><strong>Dolar Oficial:</strong> $${compraOficial} </li>
-      <li><strong>Dolar Blue:</strong> $${compraBlue} </li>
+      <li><strong>Dolar Oficial:</strong> <span class='res'>$${compraOficial}</span></li>
+      <li><strong>Dolar Blue:</strong> <span class='res'>$${compraBlue}</span></li>
     </ul>
   `
 }
@@ -61,8 +61,8 @@ async function mostrarDolarCripto() {
   $divDolares.innerHTML = `
     <h3> Dolar Cripto </h3>
     <ul>
-      <li>Compra: $${cotizacion.compra} </li>
-      <li>Venta: $${cotizacion.venta} </li>
+      <li>Compra: <span class='res'>$${cotizacion.compra}</span></li>
+      <li>Venta: <span class='res'>$${cotizacion.venta}</span></li>
     </ul>    
   `
 }
@@ -83,9 +83,9 @@ async function comprarDolarCripto() {
   const $divCompraDolarCripto = document.querySelector('#compra-dolar-cripto')
 
   $divCompraDolarCripto.innerHTML = `
-    <strong> Con tus $${platita} pesos, podes comprar: </strong>
+    <strong> Con tus <span class='res'>$${platita}</span> pesos, podes comprar: </strong>
     <ul>
-      <li><strong>Dolar Cripto:</strong> $${compraCripto} </li>
+      <li><strong>Dolar Cripto:</strong> <span class='res'>$${compraCripto}</span></li>
     </ul>
   `
 }
@@ -99,7 +99,7 @@ async function mostrarTazas() {
   $tnas.innerHTML = `
     <h3> Rendimientos en Billeteras </h3>
     <ul>
-      ${tnas.map(r => `<li><strong>${r.nombre}:</strong> ${r.tna}% <small>anual</small> </li>`).join('')}
+      ${tnas.map(r => `<li><strong>${r.nombre}:</strong> <span class='res'>${r.tna}%</span> <small>anual</small> </li>`).join('')}
     </ul>
   `
 }
@@ -125,9 +125,9 @@ async function mostrarRendimientos() {
   const rendimientos = await calcularTNA()
 
   $divRendimientos.innerHTML = `
-    <strong>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</strong>
+    <strong>Con tus <span class='res'>$${$montoUsuario.value}</span> pesos, al mes ganarías:</strong>
     <ul>
-      ${rendimientos.map(r => `<li><strong>${r.nombre}:</strong> $${r.rendimiento}</li>`).join('')}
+      ${rendimientos.map(r => `<li><strong>${r.nombre}:</strong> <span class='res'>$${r.rendimiento}</span></li>`).join('')}
     </ul>
   `
 }
@@ -141,7 +141,7 @@ async function mostrarPlazosFijos() {
   $plazos.innerHTML = `
     <h3> Plazo fijo a 30 días </h3>
     <ul>
-      ${plazos.map(r => `<li><strong>${r.nombre}:</strong> ${r.tna}% <small>anual</small> </li>`).join('')}
+      ${plazos.map(r => `<li><strong>${r.nombre}:</strong> <span class='res'>${r.tna}%</span> <small>anual</small> </li>`).join('')}
     </ul>
   `
 }
@@ -167,9 +167,9 @@ async function mostrarIntereses() {
   const intereses = await calcularPlazosFijos()
 
   $divIntereses.innerHTML = `
-    <strong>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</strong>
+    <strong>Con tus <span class='res'>$${$montoUsuario.value}</span> pesos, al mes ganarías:</strong>
     <ul>
-      ${intereses.map(r => `<li><strong>${r.nombre}:</strong> $${r.rendimiento}</li>`).join('')}
+      ${intereses.map(r => `<li><strong>${r.nombre}:</strong> <span class='res'>$${r.rendimiento}</span></li>`).join('')}
     </ul>
   `
 }

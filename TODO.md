@@ -34,11 +34,8 @@
   ? con modal al lado de cosas explicativo 
   agregar fechas de actualizacion (en las apis estan)
   porcentajes/precios distintos colores
-  esparcir el contenido para que quede bien n los cuadritos
-  linea separadora entre cotizacion y "con tus..."
 
 ## Footer 
   Hecho por mi, año, github
 
 https://comparatasas.ar/
-
