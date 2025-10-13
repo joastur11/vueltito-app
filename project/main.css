@@ -1,6 +1,6 @@
 body {
   background-color: #09090b;
-  font-family: 'Inter', sans-serif;  
+  font-family: 'Inter', sans-serif;
 }
 
 #titulo {
@@ -62,10 +62,11 @@ body {
     ". ahorro inversiones ."
     ". disclaimer inversiones .";
   gap: 2rem;
-  padding: 0 1rem;    
+  padding: 0 1rem;
 }
 
-.ahorro, .inversiones {
+.ahorro,
+.inversiones {
   background-color: #18181b;
   display: flex;
   flex-direction: column;
@@ -83,45 +84,61 @@ body {
   grid-area: ahorro;
 }
 
-#titulo-ahorro, #titulo-inversion {
+#titulo-ahorro,
+#titulo-inversion {
   color: #f5f5f5;
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
 
-.card-ahorro, .card-inversion {
-  display: flex;
-  justify-content: space-between;
+.card-ahorro,
+.card-inversion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
   align-items: stretch;
   gap: 2rem;
   width: 100%;
 }
 
-.dolares, .dolar-cripto, .rendimientos, .plazos-fijos {
-  display: flex;
+.ahorro,
+.inversiones {
+  background-color: #18181b;
+  display: grid;
+  grid-template-rows: auto;
   flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
+  align-items: center;
+  margin-top: 0px;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 10px 20px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dolares,
+.dolar-cripto,
+.rendimientos,
+.plazos-fijos {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
   padding: 0 10px;
-}
-
-#cotizacion-dolares, #cotizacion-dolar-cripto, #tnas, #tazas {
-  flex-grow: 1;
-  padding-bottom: 0;
-}
-
-.parte-inferior {
-  margin-top: auto;
-}
-
-#compra-dolares, #compra-dolar-cripto, #rendimientos-ganados, #intereses-ganados {
-  padding-top: 15px;
 }
 
 hr {
   border: none;
   border-top: 1px solid #374151;
   margin: 12px -20px 8px -20px;
+}
+
+#compra-dolares,
+#compra-dolar-cripto,
+#rendimientos-ganados,
+#intereses-ganados {
+  padding-top: 15px;
 }
 
 .inversiones {
@@ -139,7 +156,7 @@ hr {
   padding: 10px 20px 20px 20px;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .disclaimer p:first-child {
