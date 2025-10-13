@@ -172,3 +172,7 @@ hr {
 .disclaimer p {
   margin-bottom: 5px;
 }
+
+li {
+  padding: 1px;
+}
