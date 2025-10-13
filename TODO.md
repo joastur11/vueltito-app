@@ -9,15 +9,24 @@
   Influenciarse con impuestito/steamcito 🧐
   Estilo bento
 
-## Cotizacion
+## Cotización
   todas las validaciones del calculo.
 
-## Codigo
+## Código
   refactor
   en vez de ejecutar funciones de mostrar, que puedo hacer
 
 ## Ui 
-  ? con modal al lado de cosas explicativo 
-  formato input usuario
+  muchos espacios en los titulos? arriba y abajo de ahorro por ej
+  que el numero no pueda ser negativo:
+  (
+    const input = document.querySelector('input[type="number"]');
+
+    input.addEventListener('input', () => {
+    if (input.value < 0) input.value = 0;
+  });
+  )
+
+  responsive
 
 https://comparatasas.ar/

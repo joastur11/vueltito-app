@@ -8,7 +8,7 @@ async function mostrarDolares() {
   const cotizacion = await cotizarDolares()
 
   $divDolares.innerHTML = `
-    <h3> Dolar </h3>
+    <h3> Dólar </h3>
     <ul>
       <li><strong>${cotizacion[0].nombre}:</strong>
         <ul> 
@@ -16,7 +16,7 @@ async function mostrarDolares() {
           <li>Venta: <span class='res'>$${cotizacion[0].venta}</span></li>
         </ul>
       </li>
-      <li><strong>${cotizacion[1].nombre}:</strong>
+      <li><strong>${cotizacion[1].nombre}:</strong>      
         <ul> 
           <li>Compra: <span class='res'>$${cotizacion[1].compra}</span></li>
           <li>Venta: <span class='res'>$${cotizacion[1].venta}</span></li>
@@ -61,7 +61,12 @@ async function mostrarDolarCripto() {
   const cotizacion = await cotizarDolarCripto()
 
   $divDolares.innerHTML = `
-    <h3> Dolar Cripto </h3>
+    <div class="titulo-tooltip">
+      <h3>Dólar Cripto</h3>
+      <span class="tooltip">?
+        <span class="text-tooltip">Precio del dólar en mercados de criptoactivos, opera 24/7, libre y sin cepo.</span>
+      </span>
+    </div>
     <ul>
       <li>Compra: <span class='res'>$${cotizacion.compra}</span></li>
       <li>Venta: <span class='res'>$${cotizacion.venta}</span></li>
