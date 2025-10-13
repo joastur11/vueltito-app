@@ -14,5 +14,17 @@
   {
     "nombre": "Naranja X",
     "tna": 37.0
+  },
+  {
+    "nombre": "Lemon",
+    "tna": 34.62
+  },
+  {
+    "nombre": "Cocos",
+    "tna": 41.04
+  },
+  {
+    "nombre": "AstroPay",
+    "tna": 32.79
   }
 ]
