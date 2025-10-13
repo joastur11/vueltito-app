@@ -30,10 +30,7 @@
   en vez de ejecutar funciones de mostrar, que puedo hacer
 
 ## Ui 
-  no mas api calls por hoy 😒
   ? con modal al lado de cosas explicativo 
-  agregar fechas de actualizacion (en las apis estan)
-  porcentajes/precios distintos colores
 
 ## Footer 
   Hecho por mi, año, github

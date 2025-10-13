@@ -1,6 +1,7 @@
 import { cotizarDolares, obtenerTNA, cotizarDolarCripto, obtenerPlazosFijos } from "./api.js";
 
 // dolares
+
 async function mostrarDolares() {
   const $divDolares = document.querySelector('#cotizacion-dolares')
 
@@ -53,6 +54,7 @@ async function comprarDolares() {
 }
 
 // dolar cripto
+
 async function mostrarDolarCripto() {
   const $divDolares = document.querySelector('#cotizacion-dolar-cripto')
 
