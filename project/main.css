@@ -134,11 +134,17 @@ hr {
   margin: 12px -20px 8px -20px;
 }
 
+.hr-grid {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 6px -30px 6px -30px;
+}
+
 #compra-dolares,
 #compra-dolar-cripto,
 #rendimientos-ganados,
 #intereses-ganados {
-  padding-top: 15px;
+  padding-top: 6px;
 }
 
 .inversiones {
