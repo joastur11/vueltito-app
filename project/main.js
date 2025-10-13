@@ -174,6 +174,22 @@ async function mostrarIntereses() {
   `
 }
 
+// actualizacion
+
+function mostrarActualizacion() {
+  const $actualizacion = document.querySelector('#act-dolar')
+  const hoy = new Date()
+
+  const formattedDate = hoy.toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+  })
+
+  $actualizacion.innerHTML = formattedDate
+}
+mostrarActualizacion()
+
 // evento
 
 const $botonCalcular = document.querySelector('#boton-calcular')
