@@ -17,6 +17,7 @@
   en vez de ejecutar funciones de mostrar, que puedo hacer
 
 ## Ui 
+  algunos iconitos embellecedores
   muchos espacios en los titulos? arriba y abajo de ahorro por ej
   que el numero no pueda ser negativo:
   (
