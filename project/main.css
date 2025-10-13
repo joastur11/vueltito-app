@@ -133,7 +133,7 @@ body {
 hr {
   border: none;
   border-top: 1px solid #374151;
-  margin: 12px -20px 8px -20px;
+  margin: 14px -20px 14px -20px;
 }
 
 .hr-grid {
@@ -181,4 +181,56 @@ li {
 
 .res {
   color: #5c67da;
+}
+
+#footer {
+  border-top: 1px dashed rgba(255, 255, 255, 0.082);
+  background: linear-gradient(to top, #0c0c0e, #09090b);
+  color: #585660;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  margin-top: 4rem;
+}
+
+#footer p {
+  margin: 0.4rem 0;
+  opacity: 0.85;
+}
+
+#footer p:first-child {
+  font-weight: 600;
+  opacity: 1;
+}
+
+#footer a {
+  color: #585660;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+#footer a:hover {
+  color: #d4d4d8;
+}
+
+#footer a.github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #333;
+  background-color: #18181b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #d4d4d888;
+  transition: all 0.2s ease-in-out;
+}
+
+#footer a.github:hover {
+  background-color: #27272a;
+  border-color: #444;
+  transform: translateY(-1px);
+}
+
+#logo {
+  width: 14px;
 }

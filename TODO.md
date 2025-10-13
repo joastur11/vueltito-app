@@ -1,16 +1,3 @@
-## Plan
-  El usuario ingresa monto (+ plazo (ej. 12 meses)?).
-  Dos areas distintas:
-    ahorro (dolar, oro, cripto estable) 
-    inversion (tna(manual, mp, personal pay))
-
-  Dar una tabla comparativa:
-    Ahorro: cuantos dolares, oro y usdt
-    Inversiones: TNA 
-
-## APIs
-  ya esta por ahora
-
 ## Mapa Básico
   Navbar con nombre pag, modo oscuro?!?!
   Titulo Platita.app o Vueltito.app? me sobro un vuelto, algo asi che
@@ -31,8 +18,6 @@
 
 ## Ui 
   ? con modal al lado de cosas explicativo 
-
-## Footer 
-  Hecho por mi, año, github
+  formato input usuario
 
 https://comparatasas.ar/
