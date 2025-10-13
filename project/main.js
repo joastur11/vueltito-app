@@ -9,13 +9,13 @@ async function mostrarDolares() {
   $divDolares.innerHTML = `
     <h3> Dolar </h3>
     <ul>
-      <li>${cotizacion[0].nombre}:
+      <li><strong>${cotizacion[0].nombre}:</strong>
         <ul> 
           <li>Compra: $${cotizacion[0].compra}</li>
           <li>Venta: $${cotizacion[0].venta}</li>
         </ul>
       </li>
-      <li>${cotizacion[1].nombre}:
+      <li><strong>${cotizacion[1].nombre}:</strong>
         <ul> 
           <li>Compra: $${cotizacion[1].compra}</li>
           <li>Venta: $${cotizacion[1].venta}</li>
@@ -46,8 +46,8 @@ async function comprarDolares() {
   $divCompraDolares.innerHTML = `
     <strong> Con tus $${platita} pesos, podes comprar: </strong>
     <ul>
-      <li>Dolar Oficial: $${compraOficial} </li>
-      <li>Dolar Blue: $${compraBlue} </li>
+      <li><strong>Dolar Oficial:</strong> $${compraOficial} </li>
+      <li><strong>Dolar Blue:</strong> $${compraBlue} </li>
     </ul>
   `
 }
@@ -85,7 +85,7 @@ async function comprarDolarCripto() {
   $divCompraDolarCripto.innerHTML = `
     <strong> Con tus $${platita} pesos, podes comprar: </strong>
     <ul>
-      <li>Dolar Cripto: $${compraCripto} </li>
+      <li><strong>Dolar Cripto:</strong> $${compraCripto} </li>
     </ul>
   `
 }
@@ -99,7 +99,7 @@ async function mostrarTazas() {
   $tnas.innerHTML = `
     <h3> Rendimientos en Billeteras </h3>
     <ul>
-      ${tnas.map(r => `<li> ${r.nombre}: ${r.tna}% anual </li>`).join('')}
+      ${tnas.map(r => `<li><strong>${r.nombre}:</strong> ${r.tna}% <small>anual</small> </li>`).join('')}
     </ul>
   `
 }
@@ -127,7 +127,7 @@ async function mostrarRendimientos() {
   $divRendimientos.innerHTML = `
     <strong>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</strong>
     <ul>
-      ${rendimientos.map(r => `<li>${r.nombre}: $${r.rendimiento}</li>`).join('')}
+      ${rendimientos.map(r => `<li><strong>${r.nombre}:</strong> $${r.rendimiento}</li>`).join('')}
     </ul>
   `
 }
@@ -141,7 +141,7 @@ async function mostrarPlazosFijos() {
   $plazos.innerHTML = `
     <h3> Plazo fijo a 30 días </h3>
     <ul>
-      ${plazos.map(r => `<li> ${r.nombre}: ${r.tna}% anual </li>`).join('')}
+      ${plazos.map(r => `<li><strong>${r.nombre}:</strong> ${r.tna}% <small>anual</small> </li>`).join('')}
     </ul>
   `
 }
@@ -169,7 +169,7 @@ async function mostrarIntereses() {
   $divIntereses.innerHTML = `
     <strong>Con tus $${$montoUsuario.value} pesos, al mes ganarías:</strong>
     <ul>
-      ${intereses.map(r => `<li>${r.nombre}: $${r.rendimiento}</li>`).join('')}
+      ${intereses.map(r => `<li><strong>${r.nombre}:</strong> $${r.rendimiento}</li>`).join('')}
     </ul>
   `
 }
