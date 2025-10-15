@@ -25,7 +25,6 @@ async function mostrarDolares() {
     </ul>
   `
 }
-mostrarDolares()
 
 const $montoUsuario = document.querySelector('#monto-usuario')
 
@@ -73,7 +72,6 @@ async function mostrarDolarCripto() {
     </ul>    
   `
 }
-mostrarDolarCripto()
 
 async function calcularDolarCripto() {
   const platita = $montoUsuario.value
@@ -110,7 +108,6 @@ async function mostrarTazas() {
     </ul>
   `
 }
-mostrarTazas()
 
 async function calcularTNA() {
   const tnas = await obtenerTNA()
@@ -152,7 +149,6 @@ async function mostrarPlazosFijos() {
     </ul>
   `
 }
-mostrarPlazosFijos()
 
 async function calcularPlazosFijos() {
   const plazos = await obtenerPlazosFijos()
@@ -195,9 +191,18 @@ function mostrarActualizacion() {
 
   $actualizacion.innerHTML = formattedDate
 }
-mostrarActualizacion()
 
 // evento
+
+async function init() {
+  await mostrarDolares()
+  await mostrarDolarCripto()
+  await mostrarTazas()
+  await mostrarPlazosFijos()
+  mostrarActualizacion()
+}
+
+document.addEventListener("DOMContentLoaded", init)
 
 const $botonCalcular = document.querySelector('#boton-calcular')
 
