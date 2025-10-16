@@ -192,6 +192,14 @@ function mostrarActualizacion() {
   $actualizacion.innerHTML = formattedDate
 }
 
+// validacion 
+
+function validacionNumeroNegativo() {
+  $montoUsuario.addEventListener('input', () => {
+    if ($montoUsuario.value < 0) $montoUsuario.value = 0
+  })
+}
+
 // evento
 
 async function init() {
@@ -200,6 +208,7 @@ async function init() {
   await mostrarTazas()
   await mostrarPlazosFijos()
   mostrarActualizacion()
+  validacionNumeroNegativo()
 }
 
 document.addEventListener("DOMContentLoaded", init)
