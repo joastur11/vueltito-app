@@ -11,7 +11,7 @@
 ## Código
   refactor
 
-## Ui 
+## Ui
   modo oscuro/claro
   algunos iconitos embellecedores
   responsive
