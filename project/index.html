@@ -8,82 +8,84 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
   </head>
   <body>
-    <main>
-      <section id="hero">
-        <h1 id="titulo">Vueltito.app</h1>
-        <p id="textito">Te sobro plata este mes? fíjate que podes hacer!</p>
-        <input placeholder="Ingresa un monto $" id="monto-usuario" type="number" min="0" />
-        <button id="boton-calcular">Calcular</button>
-      </section>
-      <section id="resultados">
-        <div class="ahorro">
-          <h2 id="titulo-ahorro">Ahorros</h2>
-          <div class="card-ahorro">
-            <div class="dolares">
-              <div id="cotizacion-dolares">
-                <!-- -->
+    <div class="fondo-pagina">
+      <main class="contenido">
+        <section id="hero">
+          <h1 id="titulo">Vueltito.app</h1>
+          <p id="textito">Te sobro plata este mes? fíjate que podes hacer!</p>
+          <input placeholder="Ingresa un monto $" id="monto-usuario" type="number" min="0" />
+          <button id="boton-calcular">Calcular</button>
+        </section>
+        <section id="resultados">
+          <div class="ahorro">
+            <h2 id="titulo-ahorro">Ahorros</h2>
+            <div class="card-ahorro">
+              <div class="dolares">
+                <div id="cotizacion-dolares">
+                  <!-- -->
+                </div>
+                <hr class="hr-grid" />
+                <div id="compra-dolares">
+                  <!-- -->
+                </div>
               </div>
-              <hr class="hr-grid" />
-              <div id="compra-dolares">
-                <!-- -->
-              </div>
-            </div>
-            <div class="dolar-cripto">
-              <div id="cotizacion-dolar-cripto">
-                <!-- -->
-              </div>
-              <hr class="hr-grid" />
-              <div id="compra-dolar-cripto">
-                <!-- -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="inversiones">
-          <div class="titulo-tooltip">
-            <h2 id="titulo-inversion">Inversiones</h2>
-            <span class="tooltip">?
-              <span class="text-tooltip">Solo toma en cuenta las principales billeteras virtuales y bancos. Algunos pueden tener condiciones particulares.</span>
-            </span>
-          </div>
-          <div class="card-inversion">
-            <div class="rendimientos">
-              <div id="tnas">
-                <!-- -->
-              </div>
-              <hr class="hr-grid" />
-              <div id="rendimientos-ganados">
-                <!-- -->
-              </div>
-            </div>
-            <div class="plazos-fijos">
-              <div id="tazas">
-                <!-- -->
-              </div>
-              <hr class="hr-grid" />
-              <div id="intereses-ganados">
-                <!-- -->
+              <div class="dolar-cripto">
+                <div id="cotizacion-dolar-cripto">
+                  <!-- -->
+                </div>
+                <hr class="hr-grid" />
+                <div id="compra-dolar-cripto">
+                  <!-- -->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="disclaimer">
-          <strong>Última actualización:</strong>
-          <p><strong>Dólar: </strong><span id="act-dolar"><!-- --></span> - <strong>Inversiones:</strong> 9/10/2025</p>
-          <hr />
-          <strong>Disclaimer</strong>
-          <p>
-            El propósito de este proyecto solo es dar una idea sobre distintas alternativas de inversion y ahorro.
-            Las alternativas representadas pueden estar desactualizadas y los beneficios no ser certeros.
-          </p>
-        </div>
-      </section>
-      <section id="footer">
-        <p> • 2025 Platita App - Proyecto educativo</p>
-        <p><strong>Datos:</strong><a href="https://dolarapi.com/docs/" target="_blank"> Dolar Api</a> - <a href="https://comparatasas.ar/" target="_blank">Comparatasas.ar</a></p>
-        <a href="https://github.com/joastur11" target="_blank" class="github"><img src="/project/GitHub.svg" id="logo"/> GitHub</a>
-      </section>
-    </main>
+          <div class="inversiones">
+            <div class="titulo-tooltip">
+              <h2 id="titulo-inversion">Inversiones</h2>
+              <span class="tooltip">?
+                <span class="text-tooltip">Solo toma en cuenta las principales billeteras virtuales y bancos. Algunos pueden tener condiciones particulares.</span>
+              </span>
+            </div>
+            <div class="card-inversion">
+              <div class="rendimientos">
+                <div id="tnas">
+                  <!-- -->
+                </div>
+                <hr class="hr-grid" />
+                <div id="rendimientos-ganados">
+                  <!-- -->
+                </div>
+              </div>
+              <div class="plazos-fijos">
+                <div id="tazas">
+                  <!-- -->
+                </div>
+                <hr class="hr-grid" />
+                <div id="intereses-ganados">
+                  <!-- -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="disclaimer">
+            <strong>Última actualización:</strong>
+            <p><strong>Dólar: </strong><span id="act-dolar"><!-- --></span> - <strong>Inversiones:</strong> 9/10/2025</p>
+            <hr />
+            <strong>Disclaimer</strong>
+            <p>
+              El propósito de este proyecto solo es dar una idea sobre distintas alternativas de inversion y ahorro.
+              Las alternativas representadas pueden estar desactualizadas y los beneficios no ser certeros.
+            </p>
+          </div>
+        </section>
+        <section id="footer">
+          <p> • 2025 Platita App - Proyecto educativo</p>
+          <p><strong>Datos:</strong><a href="https://dolarapi.com/docs/" target="_blank"> Dolar Api</a> - <a href="https://comparatasas.ar/" target="_blank">Comparatasas.ar</a></p>
+          <a href="https://github.com/joastur11" target="_blank" class="github"><img src="/project/GitHub.svg" id="logo"/> GitHub</a>
+        </section>
+      </main>
+    </div>
     <script type="module" src='main.js'></script>
   </body>
 </html>
