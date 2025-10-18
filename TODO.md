@@ -16,4 +16,9 @@
   algunos iconitos embellecedores
   responsive
 
+## Agregar funcionalidades:
+  - Historial (al lado del titulo? o abajo chiquito)
+  - Gráficos historial de dolar (y capaz de billeteras?). Librería tipo Chart.js o Recharts.
+  - Modo oscuro / claro
+  - Algunas animaciones (de scroll que vaya apareciendo lo de abajo)
 https://comparatasas.ar/
