@@ -1,4 +1,4 @@
-import { cotizarDolares, obtenerTNA, cotizarDolarCripto, obtenerPlazosFijos } from "./api.js";
+import { cotizarDolares, obtenerTNA, obtenerPlazosFijos } from "./api.js";
 
 // dolares
 
@@ -57,7 +57,7 @@ async function comprarDolares() {
 async function mostrarDolarCripto() {
   const $divDolares = document.querySelector('#cotizacion-dolar-cripto')
 
-  const cotizacion = await cotizarDolarCripto()
+  const cotizacion = await cotizarDolares()
 
   $divDolares.innerHTML = `
     <div class="titulo-tooltip">
@@ -67,17 +67,17 @@ async function mostrarDolarCripto() {
       </span>
     </div>
     <ul>
-      <li>Compra: <span class='res'>$${cotizacion.compra}</span></li>
-      <li>Venta: <span class='res'>$${cotizacion.venta}</span></li>
+      <li>Compra: <span class='res'>$${cotizacion[5].compra}</span></li>
+      <li>Venta: <span class='res'>$${cotizacion[5].venta}</span></li>
     </ul>    
   `
 }
 
 async function calcularDolarCripto() {
   const platita = $montoUsuario.value
-  const cotizacion = await cotizarDolarCripto()
+  const cotizacion = await cotizarDolares()
 
-  const compraCripto = (platita / cotizacion.compra).toFixed(2)
+  const compraCripto = (platita / cotizacion[5].compra).toFixed(2)
 
   return { platita, compraCripto }
 }
@@ -209,6 +209,7 @@ async function init() {
   await mostrarPlazosFijos()
   mostrarActualizacion()
   validacionNumeroNegativo()
+  mostrarGraficoDolar()
 }
 
 document.addEventListener("DOMContentLoaded", init)

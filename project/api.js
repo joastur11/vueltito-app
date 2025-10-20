@@ -1,14 +1,8 @@
-export { cotizarDolares, cotizarDolarCripto, obtenerTNA, obtenerPlazosFijos }
+export { cotizarDolares, obtenerTNA, obtenerPlazosFijos }
 
 async function cotizarDolares() {
   const respuesta = await fetch('https://dolarapi.com/v1/dolares')
   if (!respuesta.ok) throw new Error('Error en el fetch Dolar api')
-  return await respuesta.json()
-}
-
-async function cotizarDolarCripto() {
-  const respuesta = await fetch('https://dolarapi.com/v1/dolares/cripto')
-  if (!respuesta.ok) throw new Error('Error en el fetch Dolar cripto')
   return await respuesta.json()
 }
 
