@@ -321,3 +321,7 @@ pointer-events: none;
   visibility: visible;
   opacity: 1;
 }
+
+.charts {
+  color: #f5f5f5;
+}
