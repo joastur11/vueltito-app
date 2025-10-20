@@ -14,7 +14,10 @@
           <h1 id="titulo">Vueltito.app</h1>
           <p id="textito">Te sobro plata este mes? fíjate que podes hacer!</p>
           <input placeholder="Ingresa un monto $" id="monto-usuario" type="number" min="0" />
-          <button id="boton-calcular">Calcular</button>
+          <button id="boton-calcular" disabled>Calcular</button>
+          <div class="historial">
+            <ul id="historial"></ul>
+          </div>
         </section>
         <section id="resultados">
           <div class="ahorro">
