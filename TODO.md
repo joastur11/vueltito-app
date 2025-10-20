@@ -17,7 +17,6 @@
   responsive
 
 ## Agregar funcionalidades:
-  - Historial (al lado del titulo? o abajo chiquito)
   - Gráficos historial de dolar y billeteras. Chart.js (haces back y base de datos)
   - Modo oscuro / claro
   - Algunas animaciones (de scroll que vaya apareciendo lo de abajo)
