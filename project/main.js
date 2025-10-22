@@ -262,3 +262,9 @@ function mostrarHistorial() {
 }
 
 // charts
+function fecha() {
+  let fechaActual = new Date(); // Obtiene la fecha actual
+  fechaActual.setMonth(fechaActual.getMonth() - 1); // Resta un mes
+  console.log(fechaActual);
+}
+fecha()

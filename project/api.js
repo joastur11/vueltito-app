@@ -17,3 +17,19 @@ async function obtenerPlazosFijos() {
   if (!respuesta.ok) throw new Error('Error cargando plazos fijos')
   return await respuesta.json()
 }
+
+async function obtenerDolarPasado() {
+  const respuesta = await fetch('https://api.argentinadatos.com/v1/cotizaciones/dolares')
+  if (!respuesta.ok) throw new Error('Error cargando plazos fijos')
+  const data = await respuesta.json()
+
+  let fechaLimite = new Date()
+  fechaLimite.setMonth(fechaLimite.getMonth() - 1)
+
+  const casasInteresadas = ['oficial', 'blue', 'cripto']
+
+  const datosFiltrados = data.filter(d => )
+
+}
+
+
