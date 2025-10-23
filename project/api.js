@@ -28,8 +28,8 @@ async function obtenerDolarPasado() {
 
   const casasInteresadas = ['oficial', 'blue', 'cripto']
 
-  const datosFiltrados = data.filter(d => )
+  const datosFiltrados = data.filter(d =>
+    casasInteresadas.includes(d.casa) && new Date(d.fecha) >= fechaLimite)
 
+  return datosFiltrados
 }
-
-
