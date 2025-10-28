@@ -21,4 +21,8 @@
   - Modo oscuro / claro
   - Algunas animaciones (de scroll que vaya apareciendo lo de abajo)
 
+## Graficos
+  - colores
+  - tamaños
+
 https://comparatasas.ar/
