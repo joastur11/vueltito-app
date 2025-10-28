@@ -268,19 +268,71 @@ async function procesarDatosDolar() {
 
   const datosAgrupados = data.reduce((acumulador, d) => {
     if (!acumulador[d.fecha]) {
-      acumulador[d.fecha] = { fecha: d.fecha };
+      acumulador[d.fecha] = { fecha: d.fecha }
     }
-    acumulador[d.fecha][d.casa] = { compra: d.compra, venta: d.venta };
-    return acumulador;
+    acumulador[d.fecha][d.casa] = { compra: d.compra, venta: d.venta }
+    return acumulador
   }, {})
 
   const resultado = Object.values(datosAgrupados).sort(
     (a, b) => new Date(a.fecha) - new Date(b.fecha)
-  );
+  )
 
   return resultado
 }
 
 async function mostrarGraficoDolar() {
+  const datos = await procesarDatosDolar()
 
+  const labels = datos.map(d => d.fecha)
+
+  const blueData = datos.map(d => d.blue?.compra ?? null)
+  const oficialData = datos.map(d => d.oficial?.compra ?? null)
+  const criptoData = datos.map(d => d.cripto?.compra ?? null)
+
+  const ctx = document.getElementById('chart-dolar').getContext('2d')
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Dólar Blue',
+          data: blueData,
+          borderColor: '#4B9CD3',
+          tension: 0.3,
+        },
+        {
+          label: 'Dólar Oficial',
+          data: oficialData,
+          borderColor: '#4BC0C0',
+          tension: 0.3,
+        },
+        {
+          label: 'Dólar Cripto',
+          data: criptoData,
+          borderColor: '#9966FF',
+          tension: 0.3,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top'
+        },
+        title: {
+          display: true,
+          text: 'Cotización del Dólar (últimos 30 días)'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: false
+        }
+      }
+    }
+  })
 }
