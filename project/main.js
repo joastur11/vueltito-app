@@ -210,7 +210,7 @@ async function init() {
   mostrarActualizacion()
   validacionNumeroNegativo()
   mostrarHistorial()
-  //mostrarGraficoDolar()
+  mostrarGraficoDolar()
 }
 
 document.addEventListener("DOMContentLoaded", init)
@@ -263,4 +263,24 @@ function mostrarHistorial() {
 
 // charts
 
-console.log(obtenerDolarPasado())
+async function procesarDatosDolar() {
+  const data = await obtenerDolarPasado()
+
+  const datosAgrupados = data.reduce((acumulador, d) => {
+    if (!acumulador[d.fecha]) {
+      acumulador[d.fecha] = { fecha: d.fecha };
+    }
+    acumulador[d.fecha][d.casa] = { compra: d.compra, venta: d.venta };
+    return acumulador;
+  }, {})
+
+  const resultado = Object.values(datosAgrupados).sort(
+    (a, b) => new Date(a.fecha) - new Date(b.fecha)
+  );
+
+  return resultado
+}
+
+async function mostrarGraficoDolar() {
+
+}
