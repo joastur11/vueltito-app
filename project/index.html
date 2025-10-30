@@ -85,19 +85,25 @@
         <section class="charts">
           <h2>Análisis Financiero</h2>
           <div id="graficos">
-            <canvas id="chart-dolar">
-              <!-- -->
-            </canvas>
-            <div class="tna-controls">
-              <label for="tipo-tna">Ver:</label>
-              <select id="tipo-tna">
-                <option value="bancos">Bancos</option>
-                <option value="billeteras">Billeteras</option>
-              </select>
+            <div class="chart-card">
+              <h3>Cotización del Dólar (últimos 15 días)</h3>
+              <div class="chart-wrapper">
+                <canvas id="chart-dolar"></canvas>
+              </div>
             </div>
-            <canvas id="chart-tna">
-              <!-- -->
-            </canvas>
+            <div class="chart-card">
+              <h3>TNAs bancos y billeteras virtuales (últimos 15 días)</h3>
+              <div class="tna-wrapper">
+                <div class="tna-controls">
+                  <label for="tipo-tna">Ver:</label>
+                  <select id="tipo-tna">
+                    <option value="bancos">Bancos</option>
+                    <option value="billeteras">Billeteras</option>
+                  </select>
+                </div>
+                <canvas id="chart-tna"></canvas>
+              </div>
+            </div>
           </div>
         </section>
         <section id="footer">

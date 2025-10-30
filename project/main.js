@@ -320,13 +320,10 @@ async function mostrarGraficoDolar() {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: 'top'
-        },
-        title: {
-          display: true,
-          text: 'Cotización del Dólar (últimos 15 días)'
         }
       },
       scales: {
@@ -370,13 +367,10 @@ async function mostrarGraficoTNAs() {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: 'top'
-        },
-        title: {
-          display: true,
-          text: 'TNAs bancos y billeteras virtuales (últimos 15 días)'
         }
       },
       scales: {
