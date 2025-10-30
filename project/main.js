@@ -328,7 +328,11 @@ async function mostrarGraficoDolar() {
       },
       scales: {
         y: {
-          beginAtZero: false
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: 'Compra en pesos'
+          }
         }
       }
     }
@@ -375,7 +379,11 @@ async function mostrarGraficoTNAs() {
       },
       scales: {
         y: {
-          beginAtZero: false
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: 'Porcentaje Anual'
+          }
         }
       }
     }

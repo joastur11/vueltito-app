@@ -15,15 +15,10 @@
   modo oscuro/claro
   algunos iconitos embellecedores
   responsive
+  que la linea hr no se vea hasta que se busque con el input
 
 ## Agregar funcionalidades:
-  - Gráficos historial de dolar y billeteras. Chart.js (haces back y base de datos)
   - Modo oscuro / claro
   - Algunas animaciones (de scroll que vaya apareciendo lo de abajo)
-
-## Graficos
-  - colores
-  - tamaños
-  - tooltip del dolar cripto haciendo cualquiera
 
 https://comparatasas.ar/
