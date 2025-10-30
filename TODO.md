@@ -16,6 +16,7 @@
   algunos iconitos embellecedores
   responsive
   que la linea hr no se vea hasta que se busque con el input
+  cursor default en textos
 
 ## Agregar funcionalidades:
   - Modo oscuro / claro
