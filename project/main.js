@@ -1,4 +1,4 @@
-import { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado } from "./api.js";
+import { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado, obtenerTNAsPasado } from "./api.js";
 
 // dolares
 
@@ -211,6 +211,7 @@ async function init() {
   validacionNumeroNegativo()
   mostrarHistorial()
   mostrarGraficoDolar()
+  mostrarGraficoTNAs()
 }
 
 document.addEventListener("DOMContentLoaded", init)
@@ -337,3 +338,59 @@ async function mostrarGraficoDolar() {
   })
 }
 
+async function mostrarGraficoTNAs() {
+  const datos = await obtenerTNAsPasado()
+
+  const labels = datos.map(d => d.fecha)
+  const nombresBancos = Object.keys(datos[0].bancos)
+  const nombresBilleteras = Object.keys(datos[0].billeteras)
+
+  const datasetsBancos = nombresBancos.map(nombre => ({
+    label: nombre,
+    data: datos.map(d => d.bancos[nombre]),
+    borderWidth: 2,
+    tension: 0.3
+  }))
+
+  const datasetsBilleteras = nombresBilleteras.map(nombre => ({
+    label: nombre,
+    data: datos.map(d => d.billeteras[nombre]),
+    borderWidth: 2,
+    tension: 0.3
+  }))
+
+  const ctx = document.getElementById('chart-tna').getContext('2d')
+
+  const chartTNA = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets:
+        datasetsBancos
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top'
+        },
+        title: {
+          display: true,
+          text: 'TNAs bancos y billeteras virtuales (últimos 15 días)'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: false
+        }
+      }
+    }
+  })
+
+  const select = document.getElementById('tipo-tna')
+  select.addEventListener('change', (e) => {
+    const tipo = e.target.value
+    chartTNA.data.datasets = tipo === 'bancos' ? datasetsBancos : datasetsBilleteras
+    chartTNA.update()
+  })
+}
