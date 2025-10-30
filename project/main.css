@@ -373,17 +373,85 @@ pointer-events: none;
 
 .charts {
   color: #f5f5f5;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.charts h2 {
+  color: #9186f3;
+  margin-bottom: 2rem;
 }
 
 #graficos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-areas: ". dolar tna .";
   gap: 2rem;
-  justify-items: center;
+  width: 100%;
+  padding: 0 1rem;
 }
 
-#graficos canvas {
+.chart-card:first-child {
+  grid-area: dolar;
+}
+
+.chart-card:last-child {
+  grid-area: tna;
+}
+
+.chart-card {
+  background-color: #18181b;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 700px;
-  height: 300px;
+  box-sizing: border-box;
+}
+
+.chart-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+.chart-wrapper,
+.tna-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px; 
+}
+
+.tna-controls {
+  position: absolute;
+  top: -50px;
+  right: 16px;
+  background-color: rgba(24, 24, 27, 0.9);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.tna-controls label {
+  font-size: 0.9rem;
+  color: #f5f5f5;
+}
+
+.tna-controls select {
+  background-color: #27272a;
+  color: #f5f5f5;
+  border: 1px solid #52525b;
+  border-radius: 6px;
+  padding: 3px 6px;
+  cursor: pointer;
 }
