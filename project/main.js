@@ -325,7 +325,7 @@ async function mostrarGraficoDolar() {
         },
         title: {
           display: true,
-          text: 'Cotización del Dólar (últimos 30 días)'
+          text: 'Cotización del Dólar (últimos 15 días)'
         }
       },
       scales: {

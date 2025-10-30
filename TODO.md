@@ -24,5 +24,6 @@
 ## Graficos
   - colores
   - tamaños
+  - tooltip del dolar cripto haciendo cualquiera
 
 https://comparatasas.ar/
