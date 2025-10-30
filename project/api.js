@@ -24,7 +24,7 @@ async function fetchYStorage() {
   const data = await respuesta.json()
 
   const fechaLimite = new Date()
-  fechaLimite.setMonth(fechaLimite.getMonth() - 1)
+  fechaLimite.setDate(fechaLimite.getDate() - 15)
   const casasInteresadas = ['oficial', 'blue', 'cripto']
 
   const datosFiltrados = data.filter(d =>
