@@ -1,27 +1,23 @@
 [
   {
     "nombre": "Banco Nacion",
-    "tna": 37.5
+    "tna": 39.5
   },
   {
     "nombre": "Santander",
-    "tna": 35
+    "tna": 37.0
   },
   {
     "nombre": "Hipotecario",
-    "tna": 37.5
+    "tna": 34.5
   },
   {
     "nombre": "Galicia",
-    "tna": 30.25
-  },
-  {
-    "nombre": "HSBC",
-    "tna": 28.0
+    "tna": 30.2
   },
   {
     "nombre": "ICBC",
-    "tna": 35.15
+    "tna": 35.5
   },
   {
     "nombre": "BBVA",
@@ -29,6 +25,6 @@
   },
   {
     "nombre": "Macro",
-    "tna": 38.0
+    "tna": 34.0
   }
 ]
