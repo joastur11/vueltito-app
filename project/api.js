@@ -1,4 +1,4 @@
-export { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado }
+export { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado, obtenerTNAsPasado }
 
 async function cotizarDolares() {
   const respuesta = await fetch('https://dolarapi.com/v1/dolares')
@@ -20,7 +20,7 @@ async function obtenerPlazosFijos() {
 
 async function fetchYStorage() {
   const respuesta = await fetch('https://api.argentinadatos.com/v1/cotizaciones/dolares')
-  if (!respuesta.ok) throw new Error('Error cargando plazos fijos')
+  if (!respuesta.ok) throw new Error('Error cargando argentinadatos.com')
   const data = await respuesta.json()
 
   const fechaLimite = new Date()
@@ -54,4 +54,10 @@ async function obtenerDolarPasado() {
       return JSON.parse(localStorage.getItem('dolarDatos'))
     }
   }
+}
+
+async function obtenerTNAsPasado() {
+  const respuesta = await fetch('./tazashistoricas.json')
+  if (!respuesta.ok) throw new Error('Error cargando TNAs')
+  return await respuesta.json()
 }
