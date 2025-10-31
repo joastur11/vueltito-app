@@ -1,4 +1,4 @@
-import { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado, obtenerTNAsPasado } from "./api.js";
+import { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado, obtenerTNAsPasado, obtenerNoticias } from "./api.js";
 
 // dolares
 
@@ -212,6 +212,7 @@ async function init() {
   mostrarHistorial()
   mostrarGraficoDolar()
   mostrarGraficoTNAs()
+  mostrarNoticias()
 }
 
 document.addEventListener("DOMContentLoaded", init)
@@ -287,9 +288,9 @@ async function mostrarGraficoDolar() {
 
   const labels = datos.map(d => d.fecha)
 
-  const blueData = datos.map(d => d.blue?.compra ?? null)
-  const oficialData = datos.map(d => d.oficial?.compra ?? null)
-  const criptoData = datos.map(d => d.cripto?.compra ?? null)
+  const blueData = datos.map(d => d.blue?.venta ?? null)
+  const oficialData = datos.map(d => d.oficial?.venta ?? null)
+  const criptoData = datos.map(d => d.cripto?.venta ?? null)
 
   const ctx = document.getElementById('chart-dolar').getContext('2d')
 
@@ -331,7 +332,7 @@ async function mostrarGraficoDolar() {
           beginAtZero: false,
           title: {
             display: true,
-            text: 'Compra en pesos'
+            text: 'Venta en pesos'
           }
         }
       }
@@ -395,4 +396,19 @@ async function mostrarGraficoTNAs() {
     chartTNA.data.datasets = tipo === 'bancos' ? datasetsBancos : datasetsBilleteras
     chartTNA.update()
   })
+}
+
+async function mostrarNoticias() {
+  const data = await obtenerNoticias()
+  const $section = document.querySelector('#seccion-noticias')
+
+  $section.innerHTML = data.map(d => `
+    <div class="noticia">
+      <a href="${d.url}" target="_blank">
+        <img src="${d.image}" alt="">
+        <strong>${d.title}</strong>
+        <p>${d.description || ''}</p>
+      </a>
+    </div>
+  `).join('')
 }
