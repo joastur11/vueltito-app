@@ -17,9 +17,11 @@
   responsive
   que la linea hr no se vea hasta que se busque con el input
   cursor default en textos
+  navbar
 
 ## Agregar funcionalidades:
   - Modo oscuro / claro
   - Algunas animaciones (de scroll que vaya apareciendo lo de abajo)
+  - navbar
 
 https://comparatasas.ar/

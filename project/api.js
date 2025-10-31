@@ -1,4 +1,4 @@
-export { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado, obtenerTNAsPasado }
+export { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerDolarPasado, obtenerTNAsPasado, obtenerNoticias }
 
 async function cotizarDolares() {
   const respuesta = await fetch('https://dolarapi.com/v1/dolares')
@@ -60,4 +60,18 @@ async function obtenerTNAsPasado() {
   const respuesta = await fetch('./tazashistoricas.json')
   if (!respuesta.ok) throw new Error('Error cargando TNAs')
   return await respuesta.json()
+}
+
+async function obtenerNoticias() {
+  const API_KEY = '39201c558f75a6af4bfcff0db216d101'
+  const url = `https://gnews.io/api/v4/top-headlines?country=ar&topic=business&lang=es&max=5&apikey=${API_KEY}`;
+
+  try {
+    const respuesta = await fetch(url)
+    if (!respuesta.ok) throw new Error('Error al cargar noticias')
+    const data = await respuesta.json()
+    return data.articles
+  } catch (error) {
+    console.error(error)
+  }
 }
