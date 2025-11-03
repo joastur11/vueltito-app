@@ -420,3 +420,15 @@ async function mostrarNoticias() {
     </div>
   `).join('')
 }
+
+// theme
+
+const $themeToggle = document.querySelector('#theme')
+
+$themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const newTheme = current === 'light' ? '' : 'light';
+
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+});
