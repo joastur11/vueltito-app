@@ -17,7 +17,6 @@
   responsive
 
 ## Agregar funcionalidades:
-  - Modo oscuro / claro
-  - Algunas animaciones (de scroll que vaya apareciendo lo de abajo) (esta medio roto, investigar mas)
+  - boton theme
 
 https://comparatasas.ar/
