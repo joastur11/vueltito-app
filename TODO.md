@@ -15,8 +15,6 @@
   modo oscuro/claro
   algunos iconitos embellecedores
   responsive
-  que la linea hr no se vea hasta que se busque con el input
-  cursor default en textos
   navbar
 
 ## Agregar funcionalidades:
