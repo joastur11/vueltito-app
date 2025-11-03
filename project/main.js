@@ -221,6 +221,13 @@ $montoUsuario.addEventListener('input', () => {
   $botonCalcular.disabled = $montoUsuario.value.trim() === ''
 })
 
+function mostrarSeparador() {
+  const $hr = document.querySelectorAll('.hr-grid')
+  $hr.forEach(hr => {
+    hr.classList.remove('hr-hidden')
+  })
+}
+
 const $botonCalcular = document.querySelector('#boton-calcular')
 
 $botonCalcular.addEventListener('click', () => {
@@ -230,6 +237,7 @@ $botonCalcular.addEventListener('click', () => {
   mostrarIntereses()
   guardarBusqueda($montoUsuario.value)
   mostrarHistorial()
+  mostrarSeparador()
 })
 
 // historial
