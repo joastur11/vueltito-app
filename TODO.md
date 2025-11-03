@@ -15,11 +15,9 @@
   modo oscuro/claro
   algunos iconitos embellecedores
   responsive
-  navbar
 
 ## Agregar funcionalidades:
   - Modo oscuro / claro
   - Algunas animaciones (de scroll que vaya apareciendo lo de abajo) (esta medio roto, investigar mas)
-  - navbar
 
 https://comparatasas.ar/
