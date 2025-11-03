@@ -79,6 +79,7 @@ body {
   color: #f5f5f5;
   font-size: 1.1rem;
   margin: 0 16px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   position: relative;
   transition: color 0.2s ease;
@@ -130,6 +131,7 @@ body {
 #titulo {
   font-size: 3rem;
   color: #9186f3;
+  letter-spacing: 0.5px;
   font-weight: 700;
   margin-bottom: 5px;  
 }
@@ -225,6 +227,7 @@ body {
 
 #resultados {
   font-size: 1.1rem;
+  letter-spacing: 0.5px;
   color: #e4e4e7;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
@@ -234,6 +237,10 @@ body {
     ". disclaimer inversiones .";
   gap: 2rem;
   padding: 0
+}
+
+small {
+  letter-spacing: 0px;
 }
 
 .ahorro,
@@ -317,6 +324,7 @@ hr {
   grid-area: disclaimer;
   align-items: flex-start;
   font-size: 0.9rem;
+  letter-spacing: 0px;
   border: 1px solid #374151;
   border-radius: 12px;
   padding: 10px 20px 20px 20px;
