@@ -95,6 +95,19 @@ body {
   animation-timeline: scroll(root block);
 }
 
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
+/* El contenedor del toggle */
+#boton-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
 .navbar h2 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -681,4 +694,66 @@ pointer-events: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.icon {
+  font-size: 14px;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.3s ease;
+}
+
+.toggle-label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #4f46e5;
+}
+
+.toggle-input:checked + .toggle-label::after {
+  transform: translateX(28px);
+}
+
+.toggle-input:not(:checked) + .toggle-label .moon {
+  opacity: 0.4;
+}
+.toggle-input:checked + .toggle-label .sun {
+  opacity: 0.4;
+}
+
+.toggle-input:not(:checked) + .toggle-label .sun {
+  text-shadow: 0 0 6px #ffd54f, 0 0 12px #ffb300;
+}
+
+.toggle-input:checked + .toggle-label .moon {
+  text-shadow: 0 0 6px #a5b4fc, 0 0 12px #818cf8;
 }
