@@ -423,7 +423,7 @@ async function mostrarNoticias() {
 
 // theme
 
-const $themeToggle = document.querySelector('#theme')
+const $themeToggle = document.querySelector('#toggle')
 
 $themeToggle.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');

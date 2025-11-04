@@ -12,11 +12,7 @@
   refactor
 
 ## Ui
-  modo oscuro/claro
   algunos iconitos embellecedores
   responsive
-
-## Agregar funcionalidades:
-  - boton theme
 
 https://comparatasas.ar/
