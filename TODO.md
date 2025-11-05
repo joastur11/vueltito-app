@@ -12,7 +12,6 @@
   refactor
 
 ## Ui
-  algunos iconitos embellecedores
   responsive
 
 https://comparatasas.ar/
