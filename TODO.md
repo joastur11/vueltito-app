@@ -13,5 +13,6 @@
 
 ## Ui
   responsive
+  skeletons y spinners 
 
 https://comparatasas.ar/
