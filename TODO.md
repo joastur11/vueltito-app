@@ -14,5 +14,9 @@
 ## Ui
   responsive
   skeletons y spinners 
+  chequear argify, impuestito, etc para ver que copiar juaj
+
+## MD
+  SPA 
 
 https://comparatasas.ar/
