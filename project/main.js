@@ -352,7 +352,7 @@ async function mostrarGraficoDolar() {
         }
       }
     })
-  } catch (error) {
+  } catch (_error) {
     spinner.remove()
     $contenedor.innerHTML = `<p>Error cargando gráfico</p>`
   }
@@ -421,7 +421,7 @@ async function mostrarGraficoTNAs() {
       chartTNA.update()
     })
 
-  } catch (error) {
+  } catch (_error) {
     spinner.remove()
     $contenedor.innerHTML = `<p>Error cargando gráfico</p>`
   }
@@ -447,9 +447,9 @@ async function mostrarNoticias() {
          </a>
        </div>
      `).join('')
-  } catch (error) {
+  } catch (_error) {
     spinner.remove()
-    $section.innerHTML = `<p>Error cargando noticias 😔</p>`
+    $section.innerHTML = `<p>Error cargando noticias 😔</p>,`
   }
 }
 
