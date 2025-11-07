@@ -192,7 +192,7 @@ function mostrarActualizacion() {
   $actualizacion.innerHTML = formattedDate
 }
 
-// validacion 
+// validación 
 
 function validacionNumeroNegativo() {
   $montoUsuario.addEventListener('input', () => {
@@ -292,133 +292,165 @@ async function procesarDatosDolar() {
 }
 
 async function mostrarGraficoDolar() {
-  const datos = await procesarDatosDolar()
+  const $section = document.querySelector('.chart-card')
+  const spinner = mostrarSpinner($section)
 
-  const labels = datos.map(d => d.fecha)
+  try {
+    const datos = await procesarDatosDolar()
 
-  const blueData = datos.map(d => d.blue?.venta ?? null)
-  const oficialData = datos.map(d => d.oficial?.venta ?? null)
-  const criptoData = datos.map(d => d.cripto?.venta ?? null)
+    spinner.remove()
 
-  const ctx = document.getElementById('chart-dolar').getContext('2d')
+    const labels = datos.map(d => d.fecha)
 
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [
-        {
-          label: 'Dólar Blue',
-          data: blueData,
-          borderColor: '#4B9CD3',
-          tension: 0.3,
-        },
-        {
-          label: 'Dólar Oficial',
-          data: oficialData,
-          borderColor: '#4BC0C0',
-          tension: 0.3,
-        },
-        {
-          label: 'Dólar Cripto',
-          data: criptoData,
-          borderColor: '#9966FF',
-          tension: 0.3,
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'top'
-        }
+    const blueData = datos.map(d => d.blue?.venta ?? null)
+    const oficialData = datos.map(d => d.oficial?.venta ?? null)
+    const criptoData = datos.map(d => d.cripto?.venta ?? null)
+
+    const ctx = document.getElementById('chart-dolar').getContext('2d')
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Dólar Blue',
+            data: blueData,
+            borderColor: '#4B9CD3',
+            tension: 0.3,
+          },
+          {
+            label: 'Dólar Oficial',
+            data: oficialData,
+            borderColor: '#4BC0C0',
+            tension: 0.3,
+          },
+          {
+            label: 'Dólar Cripto',
+            data: criptoData,
+            borderColor: '#9966FF',
+            tension: 0.3,
+          }
+        ]
       },
-      scales: {
-        y: {
-          beginAtZero: false,
-          title: {
-            display: true,
-            text: 'Venta en pesos'
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            title: {
+              display: true,
+              text: 'Venta en pesos'
+            }
           }
         }
       }
-    }
-  })
+    })
+  } catch (error) {
+    spinner.remove()
+    $contenedor.innerHTML = `<p>Error cargando gráfico</p>`
+  }
 }
 
 async function mostrarGraficoTNAs() {
-  const datos = await obtenerTNAsPasado()
+  const $section = document.querySelector('.chart-card')
+  const spinner = mostrarSpinner($section)
 
-  const labels = datos.map(d => d.fecha)
-  const nombresBancos = Object.keys(datos[0].bancos)
-  const nombresBilleteras = Object.keys(datos[0].billeteras)
+  try {
+    const datos = await obtenerTNAsPasado()
 
-  const datasetsBancos = nombresBancos.map(nombre => ({
-    label: nombre,
-    data: datos.map(d => d.bancos[nombre]),
-    borderWidth: 2,
-    tension: 0.3
-  }))
+    spinner.remove()
 
-  const datasetsBilleteras = nombresBilleteras.map(nombre => ({
-    label: nombre,
-    data: datos.map(d => d.billeteras[nombre]),
-    borderWidth: 2,
-    tension: 0.3
-  }))
+    const labels = datos.map(d => d.fecha)
+    const nombresBancos = Object.keys(datos[0].bancos)
+    const nombresBilleteras = Object.keys(datos[0].billeteras)
 
-  const ctx = document.getElementById('chart-tna').getContext('2d')
+    const datasetsBancos = nombresBancos.map(nombre => ({
+      label: nombre,
+      data: datos.map(d => d.bancos[nombre]),
+      borderWidth: 2,
+      tension: 0.3
+    }))
 
-  const chartTNA = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets:
-        datasetsBancos
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'top'
-        }
+    const datasetsBilleteras = nombresBilleteras.map(nombre => ({
+      label: nombre,
+      data: datos.map(d => d.billeteras[nombre]),
+      borderWidth: 2,
+      tension: 0.3
+    }))
+
+    const ctx = document.getElementById('chart-tna').getContext('2d')
+
+    const chartTNA = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets:
+          datasetsBancos
       },
-      scales: {
-        y: {
-          beginAtZero: false,
-          title: {
-            display: true,
-            text: 'Porcentaje Anual'
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            title: {
+              display: true,
+              text: 'Porcentaje Anual'
+            }
           }
         }
       }
-    }
-  })
+    })
 
-  const select = document.getElementById('tipo-tna')
-  select.addEventListener('change', (e) => {
-    const tipo = e.target.value
-    chartTNA.data.datasets = tipo === 'bancos' ? datasetsBancos : datasetsBilleteras
-    chartTNA.update()
-  })
+    const select = document.getElementById('tipo-tna')
+    select.addEventListener('change', (e) => {
+      const tipo = e.target.value
+      chartTNA.data.datasets = tipo === 'bancos' ? datasetsBancos : datasetsBilleteras
+      chartTNA.update()
+    })
+
+  } catch (error) {
+    spinner.remove()
+    $contenedor.innerHTML = `<p>Error cargando gráfico</p>`
+  }
 }
 
-async function mostrarNoticias() {
-  const data = await obtenerNoticias()
-  const $section = document.querySelector('#seccion-noticias')
+// noticias 
 
-  $section.innerHTML = data.map(d => `
-    <div class="noticia">
-      <a href="${d.url}" target="_blank">
-        <img src="${d.image}" alt="">
-        <strong>${d.title}</strong>
-        <p>${d.description || ''}</p>
-      </a>
-    </div>
-  `).join('')
+async function mostrarNoticias() {
+  const $section = document.querySelector('#seccion-noticias')
+  const spinner = mostrarSpinner($section)
+
+  try {
+    const data = await obtenerNoticias()
+
+    spinner.remove()
+
+    $section.innerHTML = data.map(d => `
+       <div class="noticia">
+         <a href="${d.url}" target="_blank">
+           <img src="${d.image}" alt="">
+           <strong>${d.title}</strong>
+           <p>${d.description || ''}</p>
+         </a>
+       </div>
+     `).join('')
+  } catch (error) {
+    spinner.remove()
+    $section.innerHTML = `<p>Error cargando noticias 😔</p>`
+  }
 }
 
 // theme
@@ -432,3 +464,12 @@ $themeToggle.addEventListener('click', () => {
   document.documentElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
 });
+
+// spinner 
+
+function mostrarSpinner(contenedor) {
+  const spinner = document.createElement('div')
+  spinner.className = 'spinner'
+  contenedor.appendChild(spinner)
+  return spinner
+}
