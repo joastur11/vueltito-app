@@ -13,7 +13,6 @@
 
 ## Ui
   responsive
-  chequear argify, impuestito, etc para ver que copiar juaj
 
 ## MD
   SPA 
