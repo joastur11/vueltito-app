@@ -11,9 +11,6 @@
 ## Código
   refactor
 
-## Ui
-  responsive
-
 ## MD
   SPA 
 
