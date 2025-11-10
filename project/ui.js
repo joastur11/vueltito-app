@@ -101,7 +101,7 @@ export async function mostrarTazas() {
 export async function mostrarRendimientos() {
   const $divRendimientos = document.querySelector('#rendimientos-ganados')
   const rendimientos = await calcularTNA()
-  const platita = await calcularDolares()
+  const { platita } = await calcularDolares()
 
   $divRendimientos.innerHTML = `
     <strong>Con tus <span class='res'>$${platita}</span> pesos, al mes ganarías:</strong>
@@ -126,7 +126,7 @@ export async function mostrarPlazosFijos() {
 export async function mostrarIntereses() {
   const $divIntereses = document.querySelector('#intereses-ganados')
   const intereses = await calcularPlazosFijos()
-  const platita = await calcularDolares()
+  const { platita } = await calcularDolares()
 
   $divIntereses.innerHTML = `
     <strong>Con tus <span class='res'>$${platita}</span> pesos, al mes ganarías:</strong>
