@@ -32,8 +32,8 @@ async function calcularDolares() {
   const platita = $montoUsuario.value
   const cotizacion = await cotizarDolares()
 
-  const compraOficial = (platita / cotizacion[0].compra).toFixed(2)
-  const compraBlue = (platita / cotizacion[1].compra).toFixed(2)
+  const compraOficial = (platita / cotizacion[0].venta).toFixed(2)
+  const compraBlue = (platita / cotizacion[1].venta).toFixed(2)
 
   return { platita, compraOficial, compraBlue }
 }
@@ -177,7 +177,7 @@ async function mostrarIntereses() {
   `
 }
 
-// actualizacion
+// actualización
 
 function mostrarActualizacion() {
   const $actualizacion = document.querySelector('#act-dolar')
