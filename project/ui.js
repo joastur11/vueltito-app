@@ -1,5 +1,6 @@
 import { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerNoticias } from "./api.js"
 import { calcularDolares, calcularDolarCripto, calcularTNA, calcularPlazosFijos } from "./calculations.js"
+import { $montoUsuario } from "./dom.js"
 
 export function mostrarSpinner(contenedor) {
   const spinner = document.createElement('div')
@@ -100,9 +101,11 @@ export async function mostrarTazas() {
 export async function mostrarRendimientos() {
   const $divRendimientos = document.querySelector('#rendimientos-ganados')
   const rendimientos = await calcularTNA()
+  const { platita } = calcularDolares()
+
 
   $divRendimientos.innerHTML = `
-    <strong>Con tus <span class='res'>$${$montoUsuario.value}</span> pesos, al mes ganarías:</strong>
+    <strong>Con tus <span class='res'>$${platita}</span> pesos, al mes ganarías:</strong>
     <ul>
       ${rendimientos.map(r => `<li><strong>${r.nombre}:</strong> <span class='res'>$${r.rendimiento}</span></li>`).join('')}
     </ul>
@@ -124,9 +127,10 @@ export async function mostrarPlazosFijos() {
 export async function mostrarIntereses() {
   const $divIntereses = document.querySelector('#intereses-ganados')
   const intereses = await calcularPlazosFijos()
+  const { platita } = calcularDolares()
 
   $divIntereses.innerHTML = `
-    <strong>Con tus <span class='res'>$${$montoUsuario.value}</span> pesos, al mes ganarías:</strong>
+    <strong>Con tus <span class='res'>$${platita}</span> pesos, al mes ganarías:</strong>
     <ul>
       ${intereses.map(r => `<li><strong>${r.nombre}:</strong> <span class='res'>$${r.rendimiento}</span></li>`).join('')}
     </ul>
