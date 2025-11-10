@@ -1,6 +1,3 @@
-## Código
-  refactor
-
 ## MD
   SPA 
 
