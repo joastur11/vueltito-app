@@ -7,13 +7,13 @@ async function cotizarDolares() {
 }
 
 async function obtenerTNA() {
-  const respuesta = await fetch('./tna.json')
+  const respuesta = await fetch('/tna.json')
   if (!respuesta.ok) throw new Error('Error cargando TNA')
   return await respuesta.json()
 }
 
 async function obtenerPlazosFijos() {
-  const respuesta = await fetch('./plazos.json')
+  const respuesta = await fetch('/plazos.json')
   if (!respuesta.ok) throw new Error('Error cargando plazos fijos')
   return await respuesta.json()
 }
