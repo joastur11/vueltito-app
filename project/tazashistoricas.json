@@ -1,27 +1,6 @@
 [
   {
-    "fecha": "2025-11-10",
-    "bancos": {
-      "Nacion": 33,
-      "Galicia": 25,
-      "Hipotecario": 30.5,
-      "ICBC": 32.25,
-      "BBVA": 27,
-      "Macro": 32.0,
-      "Santander": 27.0
-    },
-    "billeteras": {
-      "MercadoPago": 26.6,
-      "Ualá": 34.0,
-      "PersonalPay": 28.70,
-      "NaranjaX": 34.0,
-      "Lemon": 27.1,
-      "Cocos": 26.7,
-      "AstroPay": 27.6
-    }
-  },
-  {
-    "fecha": "2025-09-28",
+    "fecha": "2025-09-03",
     "bancos": {
       "Nacion": 37.5,
       "Galicia": 30.25,
@@ -42,7 +21,7 @@
     }
   },  
   {
-    "fecha": "2025-09-27",
+    "fecha": "2025-09-04",
     "bancos": {
       "Nacion": 37.5,
       "Galicia": 30.25,
@@ -63,7 +42,7 @@
     }
   },
     {
-    "fecha": "2025-09-26",
+    "fecha": "2025-09-05",
     "bancos": {
       "Nacion": 35.5,
       "Galicia": 30.25,
@@ -84,7 +63,7 @@
     }
   },
     {
-    "fecha": "2025-09-25",
+    "fecha": "2025-09-06",
     "bancos": {
       "Nacion": 32.5,
       "Galicia": 28.25,
@@ -105,7 +84,7 @@
     }
   },
     {
-    "fecha": "2025-09-24",
+    "fecha": "2025-09-07",
     "bancos": {
       "Nacion": 32.5,
       "Galicia": 28.25,
@@ -126,7 +105,7 @@
     }
   },
     {
-    "fecha": "2025-09-23",
+    "fecha": "2025-09-08",
     "bancos": {
       "Nacion": 33.5,
       "Galicia": 30.25,
@@ -147,7 +126,7 @@
     }
   },
     {
-    "fecha": "2025-09-22",
+    "fecha": "2025-09-09",
     "bancos": {
       "Nacion": 33.5,
       "Galicia": 30.25,
@@ -168,7 +147,7 @@
     }
   },
     {
-    "fecha": "2025-09-21",
+    "fecha": "2025-09-10",
     "bancos": {
       "Nacion": 31.5,
       "Galicia": 27.25,
@@ -189,7 +168,7 @@
     }
   },
     {
-    "fecha": "2025-09-20",
+    "fecha": "2025-09-11",
     "bancos": {
       "Nacion": 31.5,
       "Galicia": 27.25,
@@ -210,7 +189,7 @@
     }
   },
     {
-    "fecha": "2025-09-19",
+    "fecha": "2025-09-12",
     "bancos": {
       "Nacion": 33.5,
       "Galicia": 30.25,
@@ -231,7 +210,7 @@
     }
   },
     {
-    "fecha": "2025-09-18",
+    "fecha": "2025-09-13",
     "bancos": {
       "Nacion": 33.5,
       "Galicia": 30.25,
@@ -252,7 +231,28 @@
     }
   },
     {
-    "fecha": "2025-09-17",
+    "fecha": "2025-09-14",
+    "bancos": {
+      "Nacion": 36.5,
+      "Galicia": 33.25,
+      "Hipotecario": 35.5,
+      "ICBC": 37.15,
+      "BBVA": 38.5,
+      "Macro": 39.5,
+      "Santander": 40
+    },
+    "billeteras": {
+      "MercadoPago": 39.6,
+      "Ualá": 37.0,
+      "PersonalPay": 40.70,
+      "NaranjaX": 38.0,
+      "Lemon": 39.62,
+      "Cocos": 40.04,
+      "AstroPay": 37.79
+    }
+  },
+    {
+    "fecha": "2025-09-15",
     "bancos": {
       "Nacion": 36.5,
       "Galicia": 33.25,
@@ -293,25 +293,25 @@
       "AstroPay": 37.79
     }
   },
-    {
-    "fecha": "2025-09-15",
+  {
+    "fecha": "2025-11-10",
     "bancos": {
-      "Nacion": 36.5,
-      "Galicia": 33.25,
-      "Hipotecario": 35.5,
-      "ICBC": 37.15,
-      "BBVA": 38.5,
-      "Macro": 39.5,
-      "Santander": 40
+      "Nacion": 33,
+      "Galicia": 25,
+      "Hipotecario": 30.5,
+      "ICBC": 32.25,
+      "BBVA": 27,
+      "Macro": 32.0,
+      "Santander": 27.0
     },
     "billeteras": {
-      "MercadoPago": 39.6,
-      "Ualá": 37.0,
-      "PersonalPay": 40.70,
-      "NaranjaX": 38.0,
-      "Lemon": 39.62,
-      "Cocos": 40.04,
-      "AstroPay": 37.79
+      "MercadoPago": 26.6,
+      "Ualá": 34.0,
+      "PersonalPay": 28.70,
+      "NaranjaX": 34.0,
+      "Lemon": 27.1,
+      "Cocos": 26.7,
+      "AstroPay": 27.6
     }
   }  
 ]
