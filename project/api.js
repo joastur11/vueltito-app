@@ -7,7 +7,7 @@ async function cotizarDolares() {
 }
 
 async function obtenerTNA() {
-  const respuesta = await fetch('/TNA.json')
+  const respuesta = await fetch('/tna.json')
   if (!respuesta.ok) throw new Error('Error cargando TNA')
   return await respuesta.json()
 }
