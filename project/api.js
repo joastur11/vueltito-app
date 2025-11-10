@@ -57,7 +57,7 @@ async function obtenerDolarPasado() {
 }
 
 async function obtenerTNAsPasado() {
-  const respuesta = await fetch('./tazashistoricas.json')
+  const respuesta = await fetch('/tazashistoricas.json')
   if (!respuesta.ok) throw new Error('Error cargando TNAs')
   return await respuesta.json()
 }
