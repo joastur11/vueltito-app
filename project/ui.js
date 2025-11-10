@@ -1,6 +1,5 @@
 import { cotizarDolares, obtenerTNA, obtenerPlazosFijos, obtenerNoticias } from "./api.js"
 import { calcularDolares, calcularDolarCripto, calcularTNA, calcularPlazosFijos } from "./calculations.js"
-import { $montoUsuario } from "./dom.js"
 
 export function mostrarSpinner(contenedor) {
   const spinner = document.createElement('div')
