@@ -63,12 +63,11 @@ async function obtenerTNAsPasado() {
 }
 
 async function obtenerNoticias() {
-  const API_KEY = '39201c558f75a6af4bfcff0db216d101'
-  const url = `https://gnews.io/api/v4/top-headlines?country=ar&topic=business&lang=es&max=5&apikey=${API_KEY}`;
-
   try {
-    const respuesta = await fetch(url)
+    const respuesta = await fetch('/api/news')
+
     if (!respuesta.ok) throw new Error('Error al cargar noticias')
+
     const data = await respuesta.json()
     return data.articles
   } catch (error) {
