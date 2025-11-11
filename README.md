@@ -43,8 +43,7 @@ Incluye gráficos dinámicos, modo claro/oscuro y una sección de noticias finan
 
  No requiere instalación de dependencias — proyecto 100% front-end y JavaScript Vanilla.
 
-```md
- ## Créditos y APIs
+## Créditos y APIs
 
 - [DolarApi API](https://dolarapi.com/)
 - [ArgentinaDatos API](https://api.argentinadatos.com/)
