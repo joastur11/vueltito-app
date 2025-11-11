@@ -5,8 +5,7 @@ Incluye gráficos dinámicos, modo claro/oscuro y una sección de noticias finan
 
 [Probar la demo en vivo](https://vueltito-app.vercel.app/)
 
-```md
-## 🚀 Uso
+## Uso
 
 1. Ingresá un monto en pesos para calcular su equivalente en diferentes tipos de dólar.
 2. Compará cuantos rendimientos generarías en distintas billeteras virtuales y bancos.
@@ -44,6 +43,7 @@ Incluye gráficos dinámicos, modo claro/oscuro y una sección de noticias finan
 
  No requiere instalación de dependencias — proyecto 100% front-end y JavaScript Vanilla.
 
+```md
  ## Créditos y APIs
 
 - [DolarApi API](https://dolarapi.com/)
